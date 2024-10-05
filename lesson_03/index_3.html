@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Семантичні елементи</title>
+    <link rel="stylesheet" href="assets/css/index_3.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#browser_support">Підтримка браузерів</a></li>
+                <li><a href="#section_element">HTML5 &#60;section&#62; елемент</a></li>
+                <li><a href="#article_element">HTML5 &#60;article&#62; елемент</a></li>
+                <li><a href="#header_element">HTML5 &#60;header&#62; елемент</a></li>
+                <li><a href="#footer_element">HTML5 &#60;footer&#62; елемент</a></li>
+                <li><a href="#iframe_examples">Приклади &#60;iframe&#62;</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>HTML5 Семантичні елементи</h1>
+            <p>Семантичний елемент чітко описує його значення як для браузера, так і для розробника.</p>
+            <p>Приклади <b>не семантичних</b> елементів: &#60;div&#62; і &#60;span&#62; - нічого не говорить
+                про його вміст.</p>
+            <p>Приклади <b>семантичних</b> елементів: &#60;form&#62;, &#60;table&#62; і &#60;article&#62; - чітко
+                визначає його зміст.</p>
+            <section>
+                <h2 id="browser_support">Підтримка браузерів</h2>
+                <img src="assets/images/Screenshot_2.png" alt="browsers image">
+                <br>
+                <p>Семантичні елементи HTML5 підтримуються у всіх сучасних браузерах.</p>
+                <p>Крім того, ви можете "навчити" старих браузерів, як обробляти "невідомі елементи".</p>
+                <p>Прочитайте про це в <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank" rel="nofollow noreferrer">підтримці браузера HTML5</a>.</p>
+                <a href="#">&#8593; В гору &#8593;</a>
+            </section>
+            <section>
+                <h2>Нові семантичні елементи в HTML5</h2>
+                <p>HTML5 пропонує нові семантичні елементи для визначення різних частин веб-сторінки:</p>
+                <ul>
+                    <li>&#60;section&#62;</li>
+                    <li>&#60;article&#62;</li>
+                    <li>&#60;header&#62;</li>
+                    <li>&#60;footer&#62;</li>
+                </ul>
+                <a href="#">&#8593; В гору &#8593;</a>
+            </section>
+            <section>
+                <h2 id="section_element">HTML5 &#60;section&#62; елемент</h2>
+                <p>Елемент &#60;section&#62; визначає розділ в документі.</p>
+                <p>Згідно з документацією в3к'с HTML5: "розділ представляє собою тематичну угруповання контенту, зазвичай з заголовком".</p>
+                <p>Домашня сторінка зазвичай може бути розділена на розділи для ознайомлення, змісту і контактної інформації.</p>
+                <img src="assets/images/Screenshot_1.png" alt="example image">
+                <br>
+                <a href="#">&#8593; В гору &#8593;</a>
+            </section>
+            <section>
+                <h2 id="article_element">HTML5 &#60;article&#62; елемент</h2>
+                <p>Елемент &#60;article&#62; визначає незалежний, автономний вміст.</p>
+                <p>Стаття повинна мати сенс самостійно, і вона повинна мати можливість читати його незалежно від іншої частини веб-сайту.</p>
+                <p>Приклади того, де можна використовувати елемент &#60;article&#62;:</p>
+                <ul>
+                    <li>Повідомлення на форумі</li>
+                    <li>блозі</li>
+                    <li>Газетна стаття</li>
+                </ul>
+                <img src="assets/images/Screenshot_3.png" alt="example image">
+                <br>
+                <a href="#">&#8593; В гору &#8593;</a>
+            </section>
+            <section>
+                <h2 id="header_element">HTML5 &#60;header&#62; елемент</h2>
+                <p>Елемент &#60;header&#62; задає заголовок для документа або розділу.</p>
+                <p>Елемент &#60;header&#62; повинен використовуватися в якості контейнера для вступного змісту.</p>
+                <p>В одному документі може бути кілька елементів &#60;header&#62;.</p>
+                <p>У наступному прикладі визначається заголовок для статті:</p>
+                <img src="assets/images/Screenshot_4.png" alt="example image">
+                <br>
+                <a href="#">&#8593; В гору &#8593;</a>
+            </section>
+            <section>
+                <h2 id="footer_element">HTML5 &#60;footer&#62; елемент</h2>
+                <p>Елемент &#60;footer&#62; вказує нижній колонтитул для документа або розділу.</p>
+                <p>Нижній колонтитул зазвичай містить автора документа, інформацію про авторське право, посилання на умови використання, контактні дані і т.д.</p>
+                <p>В одному документі може бути кілька елементів &#60;footer&#62;.</p>
+                <img src="assets/images/Screenshot_5.png" alt="example image">
+                <br>
+                <a href="#">&#8593; В гору &#8593;</a>
+            </section>
+        </article>
+        <section>
+            <h2 id="iframe_examples">Приклади &#60;iframe&#62;</h2>
+            <iframe style="width: 1024px; height: 1080px;" src="../lesson_02/index_2_ua.html"></iframe>
+            <br>
+            <iframe width="1024" height="720" src="https://www.youtube.com/embed/dEBVe8Ij7JU?si=-NZHddeW4YPRiVgr" title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <a href="#">&#8593; В гору &#8593;</a>
+        </section>
+    </main>    
+</body>
+</html>

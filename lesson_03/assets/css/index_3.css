@@ -1,0 +1,10 @@
+header {
+    background-color: lightgray;
+    border: 1px solid;
+}
+
+header a {
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+}
