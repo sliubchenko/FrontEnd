@@ -196,8 +196,9 @@ body header {
     margin-bottom: 70px;
 }
 
-.portfolio_unit p {
+.portfolio_unit a {
     margin: 0;
+    color: black;
 }
 
 .portfolio_img {
@@ -206,4 +207,17 @@ body header {
     left: 0;
     right: 0;
     margin-bottom: 40px;
+}
+
+footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.contacts p {
+    margin: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0px;
 }
