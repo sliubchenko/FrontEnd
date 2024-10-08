@@ -50,11 +50,18 @@ body header {
     margin-top: 12px;
 }
 
+.container_home {
+    width: 95%;
+    max-width: 970px;
+    margin: 0 auto;
+}
+
 .container {
     width: 95%;
     max-width: 970px;
     margin: 0 auto;
-    padding: 0;
+    padding-top: 100px; 
+    padding-bottom: 100px;
 }
 
 .denis_novik {
@@ -78,7 +85,6 @@ body header {
     font-weight: 700;
     font-size: 34px;
     letter-spacing: 0px;
-    padding-top: 100px;
     padding-bottom: 50px;
     margin: 0;
     text-align: center;
@@ -87,7 +93,7 @@ body header {
 
 
 
-.about_me {
+.gray_section {
     background-color: #f6f6f6;
 }
 
@@ -100,13 +106,18 @@ body header {
 }
 
 .about_me_text p {
-    margin-bottom: 30px;    
+    margin-bottom: 30px;
 }
+
+
+
 
 .skills {
     list-style-type: none;
     display: flex;
     padding-inline-start: 0px;
+    justify-content: space-between;
+    margin: 0;
 }
 
 .skills > *:first-child {
@@ -117,11 +128,82 @@ body header {
     margin-right: 0px;
 }
 
-.skills li {
-    margin-inline: 20px;
+.skill {
+    width: 170px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.skills li img {
+.skill_image {
     width: 80px;
     height: 80px;
+    margin-bottom: 25px;
+}
+
+.skill_logo {
+    width: 80px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.logo_name {
+    color: #828282;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.28px;
+}
+
+.stars_list {
+    list-style-type: none;
+    display: flex;
+    padding-inline-start: 0px;
+    margin-bottom: 1px;
+}
+
+.stars_list > *:first-child {
+    margin-left: 0px;
+}
+
+.stars_list > *:last-child {
+    margin-right: 0px;
+}
+
+.stars_list_item {
+    margin-inline: 5px;
+    margin-bottom: 0px;
+}
+
+.black_star {
+    max-width: 26px;
+    max-height: 26px;
+}
+
+.gray_star {
+    max-width: 26px;
+    max-height: 26px;
+    opacity: 0.3;
+}
+
+
+
+.portfolio_unit {
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 70px;
+}
+
+.portfolio_unit p {
+    margin: 0;
+}
+
+.portfolio_img {
+    width: 100%;
+    margin: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 40px;
 }
