@@ -53,6 +53,7 @@ body header {
     max-width: 970px;
     height: 497px;
     margin: auto;
+    text-align: center;
 }
 
 .container h1 {
@@ -60,9 +61,26 @@ body header {
     font-size: 48px;
     letter-spacing: 0px;
     margin-top: 0;
+    text-align: left;
+}
+
+.container h2 {
+    font-weight: 700;
+    font-size: 34px;
+    letter-spacing: 0px;
+    padding-top: 100px;
 }
 
 .container img {
     position: absolute;
     bottom: 0;
+}
+
+.about_me {
+    background-color: #f6f6f6;
+}
+
+.about_me_text {
+    max-width: 480px;
+    margin: auto;
 }
