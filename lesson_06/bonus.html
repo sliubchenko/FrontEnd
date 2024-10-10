@@ -27,7 +27,7 @@
                 <input type="radio" name="sex" id="sex_m" value="male" checked>
                 <label for="sex_m">Чоловіча</label>
                 <input type="radio" name="sex" id="sex_f" value="female">
-                <label for="sex_m">Жіноча</label>
+                <label for="sex_f">Жіноча</label>
             </div>
 
             <div class="form-row">
@@ -39,17 +39,36 @@
                 <label class="label" for="address">Повна адреса</label>
                 <textarea name="address" id="address" rows="3" cols="20" placeholder="Країна, регіон, місто/селище, вулиця"></textarea>
             </div>
+
         </fieldset>
 
         <fieldset>
             <legend>Загальна інформація</legend>
 
             <div class="form-row">
-                <label class="label" for="trips">Чи були ви за кордоном за останні 5 років?</label>
+                <label class="label" for="trips">Де за кордоном ви були за останні 5 років?</label>
                 <input list="countries" name="country" id="trips">
                 <datalist id="countries">
-                    <option value="none">Не був</option>
+                    <option value="EU">
+                    <option value="USA">
+                    <option value="Asia">
                 </datalist>
+            </div>
+
+            <div class="form-row">
+                <label class="label" for="os">Якою операційною системою ви користуєтесь?</label>
+                <select name="os" id="os">
+                    <optgroup label="Linux">
+                        <option value="debian">Debian</option>
+                        <option value="ubuntu">Ubuntu</option>
+                        <option value="fedora">Fedora</option>
+                    </optgroup>
+                    <optgroup label="Windows">
+                        <option value="11">11</option>
+                        <option value="10">10</option>
+                        <option value="8">8</option>
+                    </optgroup>
+                </select>
             </div>
 
         </fieldset>
@@ -58,6 +77,7 @@
             <button type="reset">Очистити форму</button>
             <button type="submit">Зареєструватися</button>
         </div>
+
     </form>
 </body>
 </html>
