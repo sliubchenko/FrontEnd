@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бонусна форма</title>
+    <link rel="stylesheet" href="assests/css/bonus.css">
+</head>
+<body>
+    <form action="#" id="my_form" onsubmit="alert(decodeURI(new URLSearchParams(Array.from(new FormData(document.getElementById('my_form')))).toString()));return false;">
+
+        <fieldset>
+            <legend>Персональні дані</legend>
+
+            <div class="form-row">
+                <label class="label" for="fname">Ім'я</label>
+                <input type="text" name="fname" id="fname">
+            </div>
+
+            <div class="form-row">
+                <label class="label" for="lname">Прізвище</label>
+                <input type="text" name="lname" id="lname">
+            </div>
+
+            <div class="form-row">
+                <label class="label">Стать</label>
+                <input type="radio" name="sex" id="sex_m" value="male" checked>
+                <label for="sex_m">Чоловіча</label>
+                <input type="radio" name="sex" id="sex_f" value="female">
+                <label for="sex_m">Жіноча</label>
+            </div>
+
+            <div class="form-row">
+                <label class="label" for="bdate">Дата народження</label>
+                <input type="date" name="bdate" id="bdate">
+            </div>
+
+            <div class="form-row">
+                <label class="label" for="address">Повна адреса</label>
+                <textarea name="address" id="address" rows="3" cols="20" placeholder="Країна, регіон, місто/селище, вулиця"></textarea>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Загальна інформація</legend>
+
+            <div class="form-row">
+                <label class="label" for="trips">Чи були ви за кордоном за останні 5 років?</label>
+                <input list="countries" name="country" id="trips">
+                <datalist id="countries">
+                    <option value="none">Не був</option>
+                </datalist>
+            </div>
+
+        </fieldset>
+
+        <div class="form-buttons">
+            <button type="reset">Очистити форму</button>
+            <button type="submit">Зареєструватися</button>
+        </div>
+    </form>
+</body>
+</html>
