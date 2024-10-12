@@ -1,3 +1,9 @@
+:root {
+    --gray-text-color: #828282;
+    --black-text-color: #070707;
+    --gray-background-color: #f6f6f6;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +12,13 @@
 
 body {
     font-family: "Open Sans", sans-serif;
+}
+
+nav {
+    display: block;
+    height: 80px;
+    padding: 25px 0;
+    border-bottom: 1px solid #828282;
 }
 
 ul {
@@ -21,14 +34,67 @@ nav ul li {
     display: inline;
     margin: 20px;
     font-size: 1.125rem;
+    letter-spacing: 0.02em;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+nav ul li a {
+    color: var(--gray-text-color);
+}
+
+nav ul li a:hover {
+    color: var(--black-text-color);
 }
 
 a {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 45px;
+}
+
+h2 {
+    font-size: 2.125rem;
+    font-weight: 700;
+}
+
+img {
+    vertical-align: top;
+}
+
 .container {
     width: 95%;
     max-width: 970px;
     margin: 0 auto;
+}
+
+.about_me_text {
+    width: 480px;
+    margin: 0 auto;
+}
+
+#home {
+    margin-top: 12px;
+    height: 497px;
+}
+
+#about_me {
+    background-color: var(--gray-background-color);
+    height: 500px;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#about_me h2 {
+    margin-bottom: 43px;
+}
+
+#about_me p {
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+    line-height: 25px;
 }
