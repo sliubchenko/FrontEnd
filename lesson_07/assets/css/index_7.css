@@ -66,10 +66,48 @@ img {
     vertical-align: top;
 }
 
+figure {
+    margin-bottom: 60px;
+}
+
+figure img {
+    margin-bottom: 25px;
+}
+
+figure figcaption {
+    color: var(--gray-text-color);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
 .container {
     width: 95%;
     max-width: 970px;
     margin: 0 auto;
+}
+
+.container hgroup {
+    margin-bottom: 50px;
+}
+
+.container hgroup h2 {
+    margin-bottom: 20px;
+}
+
+.container hgroup p {
+    font-size: 1.125rem;
+}
+
+.black_star {
+    width: 26px;
+    height: 26px;
+}
+
+.gray_star {
+    width: 26px;
+    height: 26px;
+    opacity: 0.1;
 }
 
 .about_me_text {
@@ -97,4 +135,10 @@ img {
     font-size: 1.125rem;
     margin-bottom: 30px;
     line-height: 25px;
+}
+
+#skills {
+    height: 564px;
+    padding: 100px 0;
+    text-align: center;
 }
