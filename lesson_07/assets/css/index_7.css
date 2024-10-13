@@ -66,11 +66,11 @@ img {
     vertical-align: top;
 }
 
-figure {
+.skills_list_item figure {
     margin-bottom: 60px;
 }
 
-figure img {
+.skills_list_item figure img {
     margin-bottom: 25px;
 }
 
@@ -79,6 +79,20 @@ figure figcaption {
     font-size: 0.875rem;
     font-weight: 700;
     letter-spacing: 0.02em;
+}
+
+section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 43px;
+}
+
+footer {
+    padding: 100px 0;
+    text-align: center;
 }
 
 .container {
@@ -111,11 +125,6 @@ figure figcaption {
     height: 100%;
     width: 170px;
     height: 230px;
-}
-
-.skill_logo {
-    width: 80px;
-    height: 80px;
 }
 
 .skills_list_item ul {
@@ -151,12 +160,6 @@ figure figcaption {
 #about_me {
     background-color: var(--gray-background-color);
     height: 500px;
-    padding: 100px 0;
-    text-align: center;
-}
-
-#about_me h2 {
-    margin-bottom: 43px;
 }
 
 #about_me p {
@@ -167,6 +170,76 @@ figure figcaption {
 
 #skills {
     height: 564px;
-    padding: 100px 0;
+}
+
+#portfolio figure {
+    margin-bottom: 70px;
+}
+
+#portfolio figcaption {
+    font-size: 1.125rem;
+    font-weight: 400;
+    margin-top: 40px;
+    letter-spacing: 0.005em;
+}
+
+#portfolio figcaption a {
+    color: var(--black-text-color);
+    text-decoration: underline;
+}
+
+.send_message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 7px;
+    padding-bottom: 60px;
+}
+
+.send_message_button {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: black;
+    color: white;
+    border-radius: 22px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.social_icons {
+    list-style-type: none;
+    display: flex;
+    padding-inline-start: 0px;
+    justify-content: space-between;
+    padding-top: 30px;
+    margin: 0;
+}
+
+.social_icons > *:first-child {
+    margin-left: 0px;
+}
+
+.social_icons > *:last-child {
+    margin-right: 0px;
+}
+
+.social_icons li {
+    margin-inline: 25px;
+}
+
+.social_icon {
+    width: 40px;
+    height: 40px;
+}
+
+.like_me_text {
+    margin: 0;
+    color: #828282;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0;
     text-align: center;
 }
