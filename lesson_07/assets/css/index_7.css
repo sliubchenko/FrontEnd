@@ -172,6 +172,10 @@ footer {
     height: 564px;
 }
 
+#portfolio {
+    background-color: var(--gray-background-color);
+}
+
 #portfolio figure {
     margin-bottom: 70px;
 }
