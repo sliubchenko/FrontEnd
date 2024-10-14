@@ -213,6 +213,11 @@ footer {
     text-decoration: none;
 }
 
+.send_message_button:hover {
+    background-color: white;
+    color: black;
+}
+
 .social_icons {
     list-style-type: none;
     display: flex;
