@@ -45,10 +45,15 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--black-text-color);
+    text-shadow: 0px 0px 2px;
 }
 
 a {
     text-decoration: none;
+}
+
+a, button, .social_icon {
+    transition: all 0.5s ease;
 }
 
 h1 {
@@ -243,6 +248,11 @@ footer {
 .social_icon {
     width: 40px;
     height: 40px;
+    opacity: 0.6;
+}
+
+.social_icon:hover {
+    opacity: 1;
 }
 
 .like_me_text {
