@@ -109,7 +109,7 @@ li:nth-child(even) {
 }
   
 li:nth-child(odd) {
-background-color: #88839E;
+    background-color: #88839E;
 }
   
 
