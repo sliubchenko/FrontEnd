@@ -41,11 +41,25 @@ ul {
 }
 
 li {
+    padding-left: 8px;
     height: 68px;
     font-size: 1.688rem;
     line-height: 68px;
     font-weight: 400;
     color: white;
+}
+
+li:hover {
+    height: 62px;
+    line-height: 62px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+span {
+    vertical-align: middle;
+    font-size: 1.063rem;
+    margin-left: 16px;
 }
 
 input[type="checkbox"] {
@@ -59,6 +73,13 @@ input[type="checkbox"] + label {
     padding-left: 43px;
 }
 
+input[type="checkbox"]:checked + label {
+    position: relative;
+    padding-left: 43px;
+    color: #9B96AC;
+    text-decoration: line-through;
+}
+
 input[type="checkbox"] + label::before {
     content: '';
     display: inline-block;
@@ -67,32 +88,25 @@ input[type="checkbox"] + label::before {
     background-color: white;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 1px;
 }
 
 input[type="checkbox"]:checked + label::after {
     content: '';
     display: inline-block;
-    width: 16px;
-    height: 8px;
+    width: 12px;
+    height: 6px;
     border-left: 4px solid black;
     border-bottom: 4px solid black;
     transform: rotate(-45deg);
     position: absolute;
-    left: -10px;
-    top: 5px;
-}
-
-label::after {
-    content: attr(data-after);
-    color: white;
-    margin-left: 15px;
-    font-size: 1.063rem;
+    left: 6px;
+    top: 9px;
 }
 
 li:nth-child(even) {
     background-color: #625E77;
-  }
+}
   
 li:nth-child(odd) {
 background-color: #88839E;
