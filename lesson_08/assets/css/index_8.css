@@ -42,19 +42,27 @@ ul {
 
 li {
     padding-left: 8px;
-    height: 68px;
     font-size: 1.688rem;
-    line-height: 68px;
     font-weight: 400;
     color: white;
+    height: 62px;
+    line-height: 62px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
 }
 
 li:hover {
-    height: 62px;
-    line-height: 62px;
+    /* height: 62px;
+    line-height: 62px; */
     border-top: 3px solid white;
     border-bottom: 3px solid white;
 }
+
+li:active {
+    background-color: #7A7593;
+}
+
+
 
 span {
     vertical-align: middle;
@@ -78,6 +86,7 @@ input[type="checkbox"]:checked + label {
     padding-left: 43px;
     color: #9B96AC;
     text-decoration: line-through;
+    background-color: #7A7593;
 }
 
 input[type="checkbox"] + label::before {
