@@ -7,7 +7,8 @@
 body {
     background-color: #3399CC;
     border: 25px solid #2B81AC;
-    font-family: 'Lucida Sans Unicode', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    letter-spacing: 0;
     color: white;
     padding: 5%;
 }
@@ -16,6 +17,52 @@ h1 {
     font-size: 1.313rem;
 }
 
+h2 {
+    font-size: 1.375rem;
+}
+
 p {
     font-size: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+hgroup p {
+    font-size: 1.375rem;
+    opacity: 0.7;
+}
+
+.cities-block {
+    border: 2px solid white;
+}
+
+.cities-row {
+    font-size: 0;
+}
+
+.city {
+    font-size: initial;
+    border: 2px solid white;
+    display: inline-block;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.city:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.width-one {
+    width: 25%;
+}
+
+.width-two {
+    width: 50%;
+}
+
+.width-four {
+    width: 100%;
 }
