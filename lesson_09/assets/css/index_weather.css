@@ -11,10 +11,13 @@ body {
     letter-spacing: 0;
     color: white;
     padding: 5%;
+    margin: 0;
+    height: 100vh;
 }
 
 h1 {
     font-size: 1.313rem;
+    margin-bottom: 35px;
 }
 
 h2 {
@@ -36,6 +39,9 @@ hgroup p {
 
 .cities-block {
     border: 2px solid white;
+    background-color: white;
+    padding: 0;
+    margin-bottom: 35px;
 }
 
 .cities-row {
@@ -43,11 +49,13 @@ hgroup p {
 }
 
 .city {
+    margin: 2px;
     font-size: initial;
-    border: 2px solid white;
     display: inline-block;
     text-align: center;
     opacity: 0.7;
+    transition: all .1s ease-in;
+    padding: 2rem;
 }
 
 .city:hover {
@@ -56,13 +64,13 @@ hgroup p {
 }
 
 .width-one {
-    width: 25%;
+    width: calc(25% - 4px);
 }
 
 .width-two {
-    width: 50%;
+    width: calc(50% - 4px);
 }
 
 .width-four {
-    width: 100%;
+    width: calc(100% - 4px);
 }
