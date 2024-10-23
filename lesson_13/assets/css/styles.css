@@ -4,14 +4,16 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'PT Sans';
+}
+
 a {
     text-decoration: none;
 }
 
 header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 70px;
 }
 
 header .container {
@@ -22,8 +24,23 @@ header .container {
     padding-bottom: 13px;
 }
 
+h2 {
+    font-family: 'Francois One';
+    font-size: 2.25rem;
+    line-height: 3rem;
+    letter-spacing: 0.09rem;
+}
+
+h2 sup {
+    vertical-align: 0.5em;
+    font-family: 'Farro';
+    font-size: 1.25rem;
+    letter-spacing: 0.075em;
+}
+
 .container {
     width: min(90%, 1200px);
+    margin: 0 auto;
 }
 
 .nav-line {
@@ -68,6 +85,46 @@ header .container {
     font-family: 'Staatliches';
     src: url('../fonts/Staatliches-Regular.woff2') format('woff2');
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans';
+    src: url('../fonts/PTSans-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Francois One';
+    src: url('../fonts/FrancoisOne-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Farro';
+    src: url('../fonts/Farro-Light.woff2') format('woff2');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
