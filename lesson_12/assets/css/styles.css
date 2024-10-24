@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    padding-top: 120px;
+}
+
+section {
+    margin-bottom: 118px;
+}
+
+h2 {
+    font-family: 'Delius Unicase', sans-serif;
+    text-align: center;
+    font-size: 2.4rem;
+    margin-bottom: 76px;
+}
+
+.container {
+    width: min(90%, 1170px);
+    margin: 0 auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    gap: 30px;
+}
+
+.gallery-item {
+    display: flex;
+    justify-content: stretch;
+    align-content: stretch;
+}
+
+.gallery-item img {
+    border-radius: 20px;
+}
+
+.architectural .gallery-item:nth-child(2) {
+    grid-column: span 2;
+}
+
+.architectural .gallery-item:nth-child(3) {
+    grid-column: span 2;
+}
+
+.architectural .gallery-item:nth-child(6) {
+    grid-column: span 2;
+}
+
+.life .gallery-item:nth-child(2) {
+    grid-column: span 2;
+}
+
+.life .gallery-item:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.life .gallery-item:nth-child(4) {
+    grid-row: span 2;
+}
+
+.life .gallery-item:nth-child(5) {
+    grid-column: span 2;
+}
+
+.fashion .gallery-item:nth-child(2) {
+    grid-row: span 2;
+}
+
+.fashion .gallery-item:nth-child(5) {
+    grid-row: span 2;
+}
+
+.fashion .gallery-item:nth-child(6) {
+    grid-row: span 2;
+}
+
+.fashion .gallery-item:nth-child(8) {
+    grid-column: span 2;
+}
+
+.fashion .gallery-item:nth-child(9) {
+    grid-column: span 2;
+}
+
+@font-face {
+    font-family: 'Delius Unicase';
+    src: url('../fonts/DeliusUnicase-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

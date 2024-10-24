@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'PT Sans';
+    font-family: 'PT Sans', sans-serif;
 }
 
 a {
@@ -29,7 +29,7 @@ section {
 }
 
 h2 {
-    font-family: 'Francois One';
+    font-family: 'Francois One', sans-serif;
     font-size: 2.25rem;
     line-height: 3rem;
     letter-spacing: 0.09rem;
@@ -39,7 +39,7 @@ h2 {
 
 h2 sup {
     vertical-align: 1.5em;
-    font-family: 'Farro';
+    font-family: 'Farro', sans-serif;
     font-size: 1.05rem;
     letter-spacing: 0.075em;
     text-transform: capitalize;
@@ -62,7 +62,7 @@ p {
 }
 
 .nav-line span {
-    font-family: 'Tourney';
+    font-family: 'Tourney', sans-serif;
     font-size: 1.375rem;
     line-height: 1.125rem;
     margin: 0 54px 4px 4px ;
@@ -76,7 +76,7 @@ p {
 }
 
 .nav li {
-    font-family: 'Staatliches';
+    font-family: 'Staatliches', sans-serif;
     font-size: 1.375rem;
     letter-spacing: 0.04rem;
     color: black;
