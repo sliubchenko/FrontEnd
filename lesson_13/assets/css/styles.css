@@ -13,7 +13,7 @@ a {
 }
 
 header {
-    margin-bottom: 70px;
+    margin-bottom: 53px;
 }
 
 header .container {
@@ -24,18 +24,31 @@ header .container {
     padding-bottom: 13px;
 }
 
+section {
+    margin-bottom: 41px;
+}
+
 h2 {
     font-family: 'Francois One';
     font-size: 2.25rem;
     line-height: 3rem;
     letter-spacing: 0.09rem;
+    margin-bottom: 40px;
+    text-transform: uppercase;
 }
 
 h2 sup {
-    vertical-align: 0.5em;
+    vertical-align: 1.5em;
     font-family: 'Farro';
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     letter-spacing: 0.075em;
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 1.75rem;
+    line-height: 3rem;
+    margin-bottom: 30px;
 }
 
 .container {
@@ -71,6 +84,23 @@ h2 sup {
 
 .nav li a {
     color: inherit;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.bg-gray {
+    background-color: #DADADA;
+    /* line-height: 1.5em; */
 }
 
 @font-face {
