@@ -25,7 +25,7 @@ header .container {
 }
 
 section {
-    margin-bottom: 41px;
+    margin-bottom: 52px;
 }
 
 h2 {
@@ -48,7 +48,7 @@ h2 sup {
 p {
     font-size: 1.75rem;
     line-height: 3rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .container {
@@ -100,7 +100,11 @@ p {
 
 .bg-gray {
     background-color: #DADADA;
-    /* line-height: 1.5em; */
+}
+
+.pizza {
+    font-size: 0.75em;
+    line-height: 0.9em;
 }
 
 @font-face {
