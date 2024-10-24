@@ -341,7 +341,7 @@ footer a {
 
 .marketer-section h2 {
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
 }
 
 .marketer-section h2 + p {
@@ -365,10 +365,30 @@ footer a {
     display: flex;
     justify-content: space-between;
     align-items: start;
+    gap: 140px;
 }
 
 .footer-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 12px;
+}
+
+.footer-item h3 {
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+    margin-bottom: 18px;
+}
+
+.footer-item a {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.input-field {
+    width: 340px;
+    height: 50px;
+    border: 1px solid #BCD0E5;
+    margin-bottom: 7px;
 }
