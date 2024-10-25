@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Gilroy", "Open Sans", sans-serif;
 }
 
 nav {
@@ -35,7 +35,8 @@ nav ul li {
     margin: 20px;
     font-size: 1.125rem;
     letter-spacing: 0.02em;
-    font-weight: 400;
+    /* font-weight: 400; */
+    font-weight: normal;
     line-height: 30px;
 }
 
@@ -58,13 +59,15 @@ a, button, .social_icon {
 
 h1 {
     font-size: 3rem;
-    font-weight: 700;
+    /* font-weight: 700; */
+    font-weight: bold;
     margin-bottom: 45px;
 }
 
 h2 {
     font-size: 2.125rem;
-    font-weight: 700;
+    /* font-weight: 700; */
+    font-weight: bold;
 }
 
 img {
@@ -82,7 +85,8 @@ img {
 figure figcaption {
     color: var(--gray-text-color);
     font-size: 0.875rem;
-    font-weight: 700;
+    /* font-weight: 700; */
+    font-weight: bold;
     letter-spacing: 0.02em;
 }
 
@@ -187,7 +191,8 @@ footer {
 
 #portfolio figcaption {
     font-size: 1.125rem;
-    font-weight: 400;
+    /* font-weight: 400; */
+    font-weight: normal;
     margin-top: 40px;
     letter-spacing: 0.005em;
 }
@@ -212,7 +217,8 @@ footer {
     color: white;
     border-radius: 22px;
     font-size: 1.125rem;
-    font-weight: 700;
+    /* font-weight: 700; */
+    font-weight: bold;
     letter-spacing: 0.1em;
     text-align: center;
     text-decoration: none;
@@ -259,7 +265,24 @@ footer {
     margin: 0;
     color: #828282;
     font-size: 0.875rem;
-    font-weight: 400;
+    /* font-weight: 400; */
+    font-weight: normal;
     letter-spacing: 0;
     text-align: center;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy/Gilroy-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy/Gilroy-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
