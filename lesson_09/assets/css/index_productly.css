@@ -1,6 +1,8 @@
 :root {
     --main-text-color: #2F281E;
+    --pressed-link-color: #D80B0A;
     --buttons-color: #FF9900;
+    --buttons-hover: #F03E3D;
 }
 
 * {
@@ -30,8 +32,25 @@ ul {
     list-style: none;
 }
 
-a {
+a, button {
+    transition: all 0.5s ease;
+}
+
+a:link {
     text-decoration: none;
+    color: var(--main-text-color);
+}
+
+/* a:visited {
+    color: var(--visited-link-color);
+} */
+
+a:hover {
+    color: var(--buttons-color);
+}
+
+a:active {
+    color: var(--visited-link-color);
 }
 
 nav ul {
@@ -43,14 +62,6 @@ nav ul {
     letter-spacing: 0;
     line-height: 1.75rem;
     font-weight: 400;
-}
-
-nav a {
-    color: var(--main-text-color);
-}
-
-nav a:hover {
-    color: var(--buttons-color);
 }
 
 h1 {
@@ -107,6 +118,15 @@ footer a {
     cursor: pointer;
 }
 
+.btn-nav:hover, .btn-regular:hover {
+    background-color: var(--buttons-hover);
+}
+
+.btn-nav:active, .btn-regular:active {
+    background-color: var(--pressed-link-color);
+    transform: scale(0.95);
+}
+
 .btn-nav {
     width: 110px;
     height: 46px;
@@ -115,9 +135,21 @@ footer a {
 }
 
 .btn-white {
-    border: 1px solid #BCD0E5;
+    border: 1px solid var(--main-text-color);
     background-color: white;
     color: var(--main-text-color);
+}
+
+.btn-white:hover {
+    border: 1px solid var(--buttons-hover);
+    background-color: white;
+    color: var(--buttons-hover);
+}
+
+.btn-white:active {
+    border: 1px solid var(--pressed-link-color);
+    background-color: white;
+    color: var(--pressed-link-color);
 }
 
 .btn-regular {
