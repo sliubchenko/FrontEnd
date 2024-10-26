@@ -6,10 +6,16 @@
 
 body {
     font-family: 'PT Sans', sans-serif;
+    font-size: 1.75rem;
+    line-height: 3rem;
 }
 
 a {
     text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 header {
@@ -32,6 +38,7 @@ h2 {
     font-family: 'Francois One', sans-serif;
     font-size: 2.25rem;
     line-height: 3rem;
+    font-weight: 400;
     letter-spacing: 0.09rem;
     margin-bottom: 40px;
     text-transform: uppercase;
@@ -46,8 +53,8 @@ h2 sup {
 }
 
 p {
-    font-size: 1.75rem;
-    line-height: 3rem;
+    /* font-size: 1.75rem;
+    line-height: 3rem; */
     margin-bottom: 40px;
 }
 
@@ -59,13 +66,14 @@ p {
 .nav-line {
     display: flex;
     align-items: center;
+    gap: 54px;
 }
 
 .nav-line span {
     font-family: 'Tourney', sans-serif;
     font-size: 1.375rem;
     line-height: 1.125rem;
-    margin: 0 54px 4px 4px ;
+    margin: 0 0 4px 4px ;
 }
 
 .nav {
