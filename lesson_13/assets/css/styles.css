@@ -10,7 +10,15 @@ body {
     line-height: 3rem;
 }
 
+header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
 a {
+    color: black;
     text-decoration: none;
 }
 
@@ -19,7 +27,7 @@ a:hover {
 }
 
 header {
-    margin-bottom: 53px;
+    margin-bottom: 70px;
 }
 
 header .container {
@@ -30,8 +38,17 @@ header .container {
     padding-bottom: 13px;
 }
 
+main {
+    background-image: url(../images/bg-picture.png);
+    background-attachment: fixed;
+    background-position: right top 150px;
+    background-repeat: no-repeat;
+}
+
 section {
+    position: relative;
     margin-bottom: 52px;
+    scroll-margin-top: 89px;
 }
 
 h2 {
@@ -40,8 +57,14 @@ h2 {
     line-height: 3rem;
     font-weight: 400;
     letter-spacing: 0.09rem;
-    margin-bottom: 40px;
     text-transform: uppercase;
+    white-space: nowrap;
+}
+
+section h2 {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
 h2 sup {
@@ -52,15 +75,43 @@ h2 sup {
     text-transform: capitalize;
 }
 
+section h2::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 100px;
+    height: 8px;
+    background-color: black;
+}
+
 p {
-    /* font-size: 1.75rem;
-    line-height: 3rem; */
-    margin-bottom: 40px;
+    margin-bottom: 33px;
+}
+
+section p:last-child {
+    margin-bottom: 80px;
 }
 
 .container {
     width: min(90%, 1200px);
     margin: 0 auto;
+    display: flex;
+    gap: 28px;
+}
+
+.content-list {
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 70px;
+    top: 150px;
+    height: 100vh;
+}
+
+.content-list a {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bdbdbd;
 }
 
 .nav-line {
@@ -87,7 +138,6 @@ p {
     font-family: 'Staatliches', sans-serif;
     font-size: 1.375rem;
     letter-spacing: 0.04rem;
-    color: black;
 }
 
 .nav li a {
