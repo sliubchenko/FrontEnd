@@ -19,6 +19,10 @@ h2 {
     margin-bottom: 76px;
 }
 
+img {
+    transition: all 0.5s ease;
+}
+
 .container {
     width: min(90%, 1170px);
     margin: 0 auto;
@@ -34,10 +38,109 @@ h2 {
     display: flex;
     justify-content: stretch;
     align-content: stretch;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
 }
 
-.gallery-item img {
-    border-radius: 20px;
+.gallery-item::after,
+.gallery-item::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.gallery-item::after {
+    height: 100%;
+    background-image: linear-gradient(to top, #241f24 0%, rgba(91, 91, 91, .45) 34%, rgba(186, 185, 192, .26) 63%);
+}
+
+.gallery-item::before {
+    height: 70px;
+    background-image: linear-gradient(to top, #241f24, transparent);
+    opacity: 0;
+}
+
+.gallery-item:hover::after {
+    opacity: 0;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    position: absolute;
+    top: -40px;
+    background-color: #e0e0e0;
+    opacity: 0.5;
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.gallery-item:hover img {
+    scale: 1.1;
+}
+
+.gallery-item:hover .btn {
+    top: 20px;
+}
+
+.btn-like {
+    left: -40px;
+}
+
+.gallery-item:hover .btn-like {
+    left: 20px;
+}
+
+.btn-like:hover {
+    opacity: 1;
+}
+
+.btn-download {
+    right: -40px;
+}
+
+.gallery-item:hover .btn-download {
+    right: 20px;
+}
+
+.btn-download:hover {
+    opacity: 1;
+}
+
+.item-bottom {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px 20px 20px;
+    font-size: 1.25rem;
+    font-family: "Roboto";
+    color: white;
+    z-index: 2;
+}
+
+.author {
+    font-weight: 500;
+}
+
+.date {
+    font-weight: 400;
 }
 
 .c-span2 {
