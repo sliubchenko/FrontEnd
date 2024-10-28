@@ -8,6 +8,7 @@ body {
     font-family: 'PT Sans', sans-serif;
     font-size: 1.75rem;
     line-height: 3rem;
+    overflow-y: scroll;
 }
 
 header {
@@ -108,7 +109,6 @@ h2::before {
     height: 180px;
     perspective: 1000px;
     border-radius: 8px;
-    overflow: hidden;
 }
 
 .card:hover .card-inner {
