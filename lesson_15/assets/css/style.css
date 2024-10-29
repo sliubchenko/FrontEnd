@@ -79,6 +79,10 @@ a {
     outline: none;
 }
 
+.field-block input[type="email"] {
+    width: 500px;
+}
+
 .select-block select {
     padding-left: 10px;
     font-size: 0.938rem;
@@ -96,7 +100,7 @@ a {
     border-color: var(--blue-color);
 }
 
-.field-block input[type="text"]:focus {
+.field-block input[type="text"]:focus, .field-block input[type="email"]:focus {
     border-color: var(--blue-color);
 }
 
