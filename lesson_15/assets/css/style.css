@@ -1,7 +1,8 @@
 :root {
     --black-font: #1c1c1c;
-    --gray-font: #969696;
-    --gray-field: #545454;
+    --gray-font: #545454;
+    --gray-field: #E4E4E4;
+    --blue-color: #007bff;
 }
 
 * {
@@ -26,7 +27,7 @@ form {
 }
 
 label {
-    color: var(--gray-field);
+    color: var(--gray-font);
     font-family: "Roboto", sans-serif;
     font-weight: normal;
     font-size: 0.938rem;
@@ -46,7 +47,7 @@ p {
     margin: 50px auto;
 }
 
-.name-block {
+.name-block, .location-block {
     display: flex;
     gap: 10px;
 }
@@ -57,14 +58,14 @@ p {
     gap: 7px;
 }
 
-.field-block {
+.field-block, .select-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 7px;
 }
 
-.field-block input{
+.field-block input, .select-block select {
     width: 243px;
     height: 36px;
     color: transparent;
@@ -73,11 +74,76 @@ p {
     outline: none;
 }
 
-.field-block input:focus{
-    border-color: #007bff;
+.select-block select {
+    padding-left: 10px;
+    font-size: 0.938rem;
+    line-height: 1.375rem;
+    color: var(--gray-font);
+    font-family: "Inter", sans-serif;
+    font-weight: normal;
+    background-image: url(../images/select-icon.jpg);
+    background-repeat: no-repeat;
+    background-position: right 6px top 10px;
+    appearance: none;
 }
 
+.select-block select:focus {
+    border-color: var(--blue-color);
+}
 
+.field-block input[type="text"]:focus {
+    border-color: var(--blue-color);
+}
+
+.gender-block {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    padding-left: 5px;
+}
+
+.radio-block {
+    position: relative;
+}
+
+.radio-block input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    z-index: 10;
+}
+
+.radio-block label::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--gray-field);
+    border-radius: 50%;
+    left: -30px;
+    top: -2px;
+}
+
+.radio-block input[type="radio"]:focus + label::before {
+    border-color: var(--blue-color);
+}
+
+.radio-block input[type="radio"]:checked + label::before {
+    border-color: var(--blue-color);
+    background-color: var(--blue-color);
+}
+
+.radio-block label::after {
+    position: absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: white;
+    left: -24px;
+    top: 4px;
+}
 
 @font-face {
     font-family: 'Roboto';
