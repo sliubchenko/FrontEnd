@@ -77,33 +77,7 @@ p {
     border-color: #007bff;
 }
 
-.gender-block {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-  
-.radio-block {
-    display: flex;
-    align-items: center;
-}
 
-.radio-block input[type="radio"] {
-    display: none;  
-}
-
-.radio-block .radiomark {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 2px solid #ccc;
-}
-
-.radio-block input[type="radio"]:checked + .radiomark {
-    background-color: #007bff;
-    border-color: #007bff;
-}
 
 @font-face {
     font-family: 'Roboto';
