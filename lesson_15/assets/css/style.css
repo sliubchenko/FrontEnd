@@ -1,0 +1,130 @@
+:root {
+    --black-font: #1c1c1c;
+    --gray-font: #969696;
+    --gray-field: #545454;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 20px;
+    color: var(--black-font);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    color: var(--gray-field);
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    font-size: 0.938rem;
+    line-height: 1.375rem;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.813rem;
+    font-weight: normal;
+    line-height: 1.125rem;
+    color: var(--gray-font);
+}
+
+.container {
+    width: min(500px, 90%);
+    margin: 50px auto;
+}
+
+.name-block {
+    display: flex;
+    gap: 10px;
+}
+
+.email-block {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.field-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 7px;
+}
+
+.field-block input{
+    width: 243px;
+    height: 36px;
+    color: transparent;
+    border: 1px solid #e4e4e4;
+    border-radius: 6px;
+    outline: none;
+}
+
+.field-block input:focus{
+    border-color: #007bff;
+}
+
+.gender-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+  
+.radio-block {
+    display: flex;
+    align-items: center;
+}
+
+.radio-block input[type="radio"] {
+    display: none;  
+}
+
+.radio-block .radiomark {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.radio-block input[type="radio"]:checked + .radiomark {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
