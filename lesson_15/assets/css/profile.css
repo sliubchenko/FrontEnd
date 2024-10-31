@@ -36,32 +36,86 @@ label {
     line-height: 1.375rem;
 }
 
-p {
-    font-family: "Roboto", sans-serif;
-    font-size: 0.813rem;
-    font-weight: normal;
-    line-height: 1.125rem;
-    color: var(--gray-font);
-}
-
-a {
-    text-decoration: none;
-}
-
 .container {
     width: min(500px, 90%);
     margin: 50px auto;
 }
 
-.name-block, .location-block {
+.avatar-block {
     display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 20px;
+}
+
+.upload-block {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.upload-block p {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-weight: normal;
+    letter-spacing: -0.006rem;
+    color: var(--gray-terms);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 10px;
 }
 
-.email-block {
+.upload-button {
+    width: 138px;
+    height: 30px;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.delete-button {
+    position: relative;
+    width: 30px;
+    height: 29px;
+    background-color: white;
+    border: 1px solid var(--gray-field);
+    border-radius: 6px;
+    transition: all 0.5s ease;
+    cursor: pointer;
     display: flex;
-    flex-direction: column;
-    gap: 7px;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+}
+
+.delete-button:hover, .delete-button:focus {
+    border-color: var(--blue-color);
+}
+
+.delete-button::before {
+    content: '';
+    position: absolute;
+    width: 138px;
+    height: 28px;
+    border: 1px solid var(--gray-field);
+    border-radius: 6px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    left: -149px;
+    top: -1px;
+    background-image: url(../images/photo-icon.png);
+    background-repeat: no-repeat;
+    background-position: right 8px top 7px;
+}
+
+.user-data-block, .location-block, .number-block {
+    display: flex;
+    gap: 10px;
 }
 
 .field-block, .select-block {
@@ -79,8 +133,9 @@ a {
     outline: none;
 }
 
-.field-block input[type="email"] {
-    width: 500px;
+.field-block input[type="text"]:focus, .field-block input[type="email"]:focus, 
+.field-block input[type="number"]:focus {
+    border-color: var(--blue-color);
 }
 
 .select-block select {
@@ -100,62 +155,8 @@ a {
     border-color: var(--blue-color);
 }
 
-.field-block input[type="text"]:focus, .field-block input[type="email"]:focus {
-    border-color: var(--blue-color);
-}
-
-.gender-block {
-    display: flex;
-    gap: 25px;
-    align-items: center;
-    padding-left: 5px;
-}
-
-.radio-block {
-    position: relative;
-}
-
-.radio-block input[type="radio"] {
-    width: 20px;
-    height: 20px;
-    opacity: 0;
-    z-index: 10;
-}
-
-.radio-block label::before {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--gray-field);
-    border-radius: 50%;
-    left: -30px;
-    top: -2px;
-}
-
-.radio-block input[type="radio"]:focus + label::before {
-    border-color: var(--blue-color);
-}
-
-.radio-block input[type="radio"]:checked + label::before {
-    border-color: var(--blue-color);
-    background-color: var(--blue-color);
-}
-
-.radio-block label::after {
-    position: absolute;
-    content: '';
-    width: 8px;
-    height: 8px;
-    border: 1px solid white;
-    border-radius: 50%;
-    background-color: white;
-    left: -24px;
-    top: 4px;
-}
-
 .sign-up button {
-    width: 500px;
+    width: 150px;
     height: 38px;
     border: 1px solid var(--gray-field);
     border-radius: 6px;
@@ -175,52 +176,6 @@ a {
 .sign-up button:hover {
     cursor: pointer;
     border-color: var(--blue-color);
-}
-
-.terms {
-    padding: 0 56px;
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-    font-weight: normal;
-    font-size: 0.813rem;
-    line-height: 1.125rem;
-    letter-spacing: -0.006rem;
-    color: var(--gray-terms);
-    margin-bottom: 20px;
-}
-
-.terms a {
-    color: var(--blue-color);
-}
-
-.terms a:focus, .log-in a:focus {
-    border-bottom: 1px solid var(--blue-color);
-    outline: none;
-}
-
-.line {
-    border-bottom: 1px solid var(--gray-field);
-    margin-bottom: 20px;
-}
-
-.log-in {
-    display: flex;
-    gap: 10px;
-    align-items: baseline;
-    justify-content: center;
-    color: var(--gray-font);
-    font-family: "Roboto", sans-serif;
-    font-weight: normal;
-    font-size: 0.938rem;
-    line-height: 1.375rem;
-    letter-spacing: -0.013rem;
-    margin-bottom: 100px;
-}
-
-.log-in a {
-    font-weight: 500;
-    letter-spacing: -0.006rem;
-    color: var(--blue-color);
 }
 
 @font-face {

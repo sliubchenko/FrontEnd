@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/profile.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h1>Profile</h1>
+            <form action="#" method="post">
+                <div class="avatar-block">
+                    <img src="assets/images/avatar.png" alt="avatar">
+                    <div class="upload-block">
+                        <div class="buttons">
+                            <input type="file" class="upload-button">
+                            <button type="button" class="delete-button"><img src="assets/images/delete-icon.png" alt="delete-icon"></button>
+                        </div>
+                        <p>Up to 1 MB (300x300 px)</p>
+                    </div>
+                </div>
+                <div class="user-data-block">
+                    <div class="field-block">
+                        <label for="n">Name</label>
+                        <input type="text" id="n">
+                    </div>
+                    <div class="field-block">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email">
+                    </div>
+                </div>
+                <div class="location-block">
+                    <div class="select-block">
+                        <label for="country">Country</label>
+                        <select name="country" id="country">
+                            <option value="select">Select</option>
+                            <option value="choose">Choose</option>
+                        </select>
+                    </div>
+                    <div class="field-block">
+                        <label for="city">City</label>
+                        <input type="text" id="city">
+                    </div>
+                </div>
+                <div class="number-block">
+                    <div class="field-block">
+                        <label for="zip">ZIP</label>
+                        <input type="number" id="zip">
+                    </div>
+                    <div class="field-block">
+                        <label for="phone-number">Phone number</label>
+                        <input type="number" id="phone-number">
+                    </div>
+                </div>
+                <div class="sign-up">
+                    <button type="submit">Update</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
