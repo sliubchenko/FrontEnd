@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 header {
     border-bottom: 1px solid #EFEEF3;
     margin-bottom: 100px;
@@ -19,6 +25,7 @@ header svg:hover #c16133D {
 
 main {
     margin-bottom: 100px;
+    flex-grow: 1;
 }
 
 footer {
