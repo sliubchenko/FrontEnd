@@ -37,6 +37,11 @@ footer img {
     margin-bottom: 35px;
 }
 
+.soc {
+    fill: #16133D;
+    transition: all 0.5s ease;
+}
+
 .soc-block {
     display: flex;
     align-items: center;
@@ -59,9 +64,13 @@ footer img {
     border: 1px solid #52C29D;
 }
 
-.soc-icon:hover #c16133D {
-    fill: #52C29D;
+.soc-icon:hover .soc {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(100%) saturate(200%) hue-rotate(120deg);
 }
+
+/* .soc-icon:hover #c16133D {
+    fill: #52C29D;
+} */
 
 hgroup {
     margin-bottom: 33px;
@@ -173,30 +182,41 @@ a {
     opacity: 0.2;
 }
 
-.megaphone {
+.megaphone, .building, .phone {
     position: relative;
     display: inline-block;
     transition: opacity 0.5s ease;
 }
 
-.megaphone::after {
+.mega-ico::after, .build-ico::after, .phone-ico::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 36px;
     background-image: url('../images/megaphone-green.png');
     background-size: cover;
     opacity: 0;
     transition: opacity 0.5s ease;
+    transform: translate(-50%, -50%);
 }
 
-.card:hover .megaphone {
+.build-ico::after {
+    width: 39px;
+    background-image: url('../images/building-green.png');
+}
+
+.phone-ico::after {
+    width: 24px;
+    background-image: url('../images/phone-green.png');
+}
+
+.card:hover .megaphone, .card:hover .building, .card:hover .phone {
     opacity: 0;
 }
 
-.card:hover .megaphone::after {
+.card:hover .mega-ico::after, .card:hover .build-ico::after, .card:hover .phone-ico::after {
     opacity: 1;
 }
 
