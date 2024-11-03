@@ -173,20 +173,31 @@ a {
     opacity: 0.2;
 }
 
-.card:hover #cD1E7FF {
-    fill: #E1F4F5;
+.megaphone {
+    position: relative;
+    display: inline-block;
+    transition: opacity 0.5s ease;
 }
 
-.card:hover #cE8F3FF {
-    fill: #F4FEFF;
+.megaphone::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/megaphone-green.png');
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
-.card:hover #cB9DCFF {
-    fill: #CAEFF2;
+.card:hover .megaphone {
+    opacity: 0;
 }
 
-.card:hover #c007FFC {
-    fill: #52C29D;
+.card:hover .megaphone::after {
+    opacity: 1;
 }
 
 .description {
@@ -196,7 +207,7 @@ a {
 
 @font-face {
     font-family: 'Nunito Sans 10pt';
-    src: url('fonts/NunitoSans10pt-SemiBold.woff2') format('woff2');
+    src: url('../fonts/NunitoSans10pt-SemiBold.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
