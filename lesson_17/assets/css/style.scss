@@ -1,0 +1,205 @@
+@import 'fonts';
+
+$subtext-color: #898F8F;
+$title-color: #FFCC00;
+$h2-color: #666666;
+$p-color: #333333;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    vertical-align: top;
+}
+
+button, a {
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.container {
+    width: min(90%, 1170px);
+    margin: 0 auto;
+}
+
+.head {
+    margin: 0 auto;
+    margin-top: 121px;
+    margin-bottom: 40px;
+    width: 450px;
+    text-align: center;
+    text-transform: uppercase;
+    p {
+        color: $subtext-color;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        font-family: "Raleway", sans-serif;
+        font-weight: 500;
+        margin-bottom: 15px;
+        letter-spacing: -0.02em;
+    }
+    h1 {
+        color: $title-color;
+        font-family: "Roboto", sans-serif;
+        font-size: 3.75rem;
+        line-height: 4.125rem;
+        font-weight: 900;
+        margin-bottom: 32px;
+    }
+    div {
+        position: relative;
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 210px;
+            border-bottom: 1px solid $title-color;
+            top: 10px;
+        }
+        &::before {
+            left: -5px;
+        }
+        &::after {
+            right: -5px;
+        }
+    }
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1030px;
+    height: 560px;
+    margin: 0 auto;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: '';
+        border-left: 1px solid $title-color;
+        height: 100%;
+        left: 50%;
+    }
+}
+
+.photo {
+    position: relative;
+    &::before, &::after {
+        position: absolute;
+        content: '';
+        width: 100px;
+        height: 100px;
+        border-top: 1px solid $title-color;
+        top: -15px;
+    }
+    &::before {
+        border-left: 1px solid $title-color;
+        left: -15px;
+    }
+    &::after {
+        border-right: 1px solid $title-color;
+        right: 15px;
+    }
+}
+
+.left {
+    width: 430px;
+    position: relative;
+    &::before, &::after {
+        position: absolute;
+        content: '';
+        width: 100px;
+        height: 100px;
+        border-bottom: 1px solid $title-color;
+        top: 315px;
+    }
+    &::before {
+        border-left: 1px solid $title-color;
+        left: -15px;
+    }
+    &::after {
+        border-right: 1px solid $title-color;
+        right: 15px;
+    }
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 430px;
+    p {
+        color: $p-color;
+        font-family: "Raleway", sans-serif;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.info {
+    text-align: center;
+    margin-bottom: 30px;
+    h2 {
+        position: relative;
+        color: $h2-color;
+        font-family: "Roboto", sans-serif;
+        font-size: 2.25rem;
+        font-weight: 900;
+        margin-bottom: 60px;
+        &::after {
+            position: absolute;
+            content: '';
+            width: 100px;
+            border-bottom: 1px solid $title-color;
+            left: 50%;
+            top: 100%;
+            transform: translate(-50%, 30px);
+        }
+    }
+    h3 {
+        color: $h2-color;
+        font-family: "Raleway", sans-serif;
+        font-size: 1.5rem;
+        font-weight: normal;
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    width: 135px;
+    height: 30px;
+    margin: 0 auto;
+    margin-bottom: 49px;
+}
+
+.decore {
+    position: relative;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(to right, $title-color 20%, white 20% 30%, $title-color 30% 70%, white 70% 80%, $title-color 80% 100%);
+    margin: 0 auto;
+}
+
+button {
+    margin-top: 25px;
+    width: 118px;
+    height: 24px;
+    border: 1px solid $title-color;
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    line-height: 0.875rem;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    color: $h2-color;
+}
