@@ -70,7 +70,6 @@ button:hover, a:hover {
   font-family: "Roboto", sans-serif;
   font-size: 3.75rem;
   line-height: 4.125rem;
-  font-weight: 900;
   margin-bottom: 32px;
 }
 .head div {
@@ -173,7 +172,6 @@ button:hover, a:hover {
   color: #666666;
   font-family: "Roboto", sans-serif;
   font-size: 2.25rem;
-  font-weight: 900;
   margin-bottom: 60px;
 }
 .info h2::after {
@@ -189,7 +187,6 @@ button:hover, a:hover {
   color: #666666;
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
-  font-weight: normal;
 }
 
 .social {
