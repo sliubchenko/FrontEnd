@@ -1,11 +1,16 @@
 @use 'fonts';
 
-$text-color: black;
+$text-black: black;
+$text-gray: #7B7B7B;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+img {
+    vertical-align: top;
 }
 
 ul {
@@ -14,7 +19,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: $text-color;
+    color: $text-black;
     position: relative;
 }
 
@@ -22,15 +27,22 @@ a:hover::before {
     content: '';
     position: absolute;
     width: 40px;
-    border-bottom: 1px solid $text-color;
+    border-bottom: 1px solid $text-black;
     left: 50%;
     top: 100%;
     transform: translate(-50%, 5px);
 }
 
-.container {
-    width: min(90%, 1170px);
-    margin: 0 auto;
+h1, h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+    letter-spacing: 0.15rem;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 600;
+}
+
+h2 {
+    font-weight: normal;
 }
 
 header {
@@ -57,12 +69,84 @@ header {
     }
 }
 
+.container {
+    width: min(90%, 1170px);
+    margin: 0 auto;
+}
+
 .hero {
-    background-image: url(../images/bg-image.jpg);
+    background: url(../images/bg-image.jpg) center center / cover no-repeat;
     height: 600px;
     padding-top: 100px;
-    padding-left: 135px;
-    h1 {
-        width: 770px;
+}
+
+.h1 {
+    width: 770px;
+}
+
+.blog {
+    padding: 90px 135px;
+    .container {
+        margin: 0;
+        width: 100%;
+    }
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.content-wrap, .heading, .top {
+    width: 448px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.reverse {
+    justify-content: right;
+    flex-direction: row-reverse;
+}
+
+.heading, .top {
+    width: 369px;
+    gap: 15px;
+}
+
+.top {
+    gap: 30px;
+    h3 {
+        font-family: "Red Hat Display", sans-serif;
+        font-weight: 500;
+        font-size: 1.438rem;
+        line-height: 2.387rem;
+        letter-spacing: 0.144rem;
+    }
+}
+
+.info-txt, .body-txt {
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.66rem;
+    letter-spacing: 0.1rem;
+    color: $text-gray;
+}
+
+.body-txt {
+    position: relative;
+    letter-spacing: 0.05rem;
+    &::after {
+        position: absolute;
+        content: '';
+        background-image: url(../images/arrow-1.svg);
+        background-repeat: no-repeat;
+        width: 1.438rem;
+        height: 1rem;
+        transform: translate(100%, 50%);
     }
 }
