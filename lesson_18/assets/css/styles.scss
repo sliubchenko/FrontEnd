@@ -1,7 +1,31 @@
+@use 'fonts';
+
+$text-color: black;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+    position: relative;
+}
+
+a:hover::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    border-bottom: 1px solid $text-color;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, 5px);
 }
 
 .container {
@@ -10,9 +34,35 @@
 }
 
 header {
-    .container {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container, .links, ul {
         display: flex;
         align-items: center;
         justify-content: space-between;
+    }
+    .links, ul {
+        justify-content: center;
+        gap: 80px;
+    }
+    ul {
+        gap: 42px;
+        font-family: 'Lato', sans-serif;
+        font-weight: normal;
+        font-size: 0.875rem;
+        letter-spacing: 0.263rem;
+        text-transform: uppercase;
+    }
+}
+
+.hero {
+    background-image: url(../images/bg-image.jpg);
+    height: 600px;
+    padding-top: 100px;
+    padding-left: 135px;
+    h1 {
+        width: 770px;
     }
 }
