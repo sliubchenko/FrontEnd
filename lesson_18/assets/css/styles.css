@@ -63,7 +63,7 @@ a:hover::before {
   transform: translate(-50%, 5px);
 }
 
-h1, h2 {
+h1, h2, h3, h4, h5 {
   font-size: 3rem;
   line-height: 4rem;
   letter-spacing: 0.15rem;
@@ -73,6 +73,27 @@ h1, h2 {
 
 h2 {
   font-weight: normal;
+}
+
+h3 {
+  font-size: 1.75rem;
+  line-height: 2.905rem;
+  letter-spacing: 0.175rem;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.438rem;
+  line-height: 2.387rem;
+  letter-spacing: 0.144rem;
+}
+
+h5 {
+  font-size: 1.375rem;
+  line-height: 2.283rem;
+  letter-spacing: 0.138rem;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
 header {
@@ -115,11 +136,8 @@ header ul {
 }
 
 .blog {
-  padding: 90px 135px;
-}
-.blog .container {
-  margin: 0;
-  width: 100%;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .article {
@@ -142,7 +160,7 @@ header ul {
   flex-direction: row-reverse;
 }
 
-.heading, .top {
+.article-heading, .top {
   width: 369px;
   gap: 15px;
 }
@@ -150,15 +168,8 @@ header ul {
 .top {
   gap: 30px;
 }
-.top h3 {
-  font-family: "Red Hat Display", sans-serif;
-  font-weight: 500;
-  font-size: 1.438rem;
-  line-height: 2.387rem;
-  letter-spacing: 0.144rem;
-}
 
-.info-txt, .body-txt {
+.info-txt, .body-txt, .view-all, .post-content-heading, .description-txt, .description-vacancy, .contacts {
   font-family: "Lato", sans-serif;
   font-weight: normal;
   font-size: 1rem;
@@ -167,11 +178,18 @@ header ul {
   color: #7B7B7B;
 }
 
-.body-txt {
+.description-vacancy {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0.063rem;
+  color: #565656;
+}
+
+.body-txt, .view-all, .vacancy h4 {
   position: relative;
   letter-spacing: 0.05rem;
 }
-.body-txt::after {
+.body-txt::after, .view-all::after, .vacancy h4::after {
   position: absolute;
   content: "";
   background-image: url(../images/arrow-1.svg);
@@ -179,4 +197,142 @@ header ul {
   width: 1.438rem;
   height: 1rem;
   transform: translate(100%, 50%);
+}
+
+.vacancy h4 {
+  position: relative;
+}
+.vacancy h4::after {
+  transform: translate(0, 0);
+  left: 0;
+  top: 4em;
+}
+
+.description-txt {
+  letter-spacing: 0.05rem;
+  color: #565656;
+}
+
+.view-all {
+  letter-spacing: 0.1rem;
+  margin-right: 50px;
+}
+
+.latest-posts, .most-popular, .vacancy {
+  padding-bottom: 90px;
+}
+
+.lp-heading {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.post-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+.post-list img {
+  margin-bottom: 20px;
+}
+.post-list .post-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.post-list .post-content .post-content-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  line-height: 1.245rem;
+  letter-spacing: 0.075rem;
+}
+
+button {
+  display: block;
+  background-color: #565656;
+  width: 180px;
+  height: 46px;
+  color: white;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-family: "Lato";
+  font-weight: bold;
+  font-size: 1.125rem;
+  line-height: 1.868rem;
+  letter-spacing: 0.113rem;
+  cursor: pointer;
+}
+
+.vacancy .container, .description-vacancy {
+  display: flex;
+  justify-content: space-between;
+  gap: 230px;
+}
+.vacancy .container h4, .description-vacancy h4 {
+  font-weight: normal;
+  width: 470px;
+}
+
+.description-vacancy {
+  flex-direction: column;
+  gap: 30px;
+  width: 470px;
+}
+
+footer {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  background-color: #F4F4F4;
+}
+footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-wrap {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cta, .contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contacts {
+  gap: 15px;
+  color: black;
+}
+
+.soc, .soc-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 23px;
+}
+
+.soc-item {
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #7B7B7B;
+}
+
+.small-text {
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 0.75rem;
+  line-height: 1.245rem;
+  letter-spacing: 0.075rem;
 }
