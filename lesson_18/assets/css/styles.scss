@@ -25,7 +25,7 @@ a {
     position: relative;
 }
 
-a:hover::before {
+header a:hover::before {
     content: '';
     position: absolute;
     width: 40px;
@@ -33,6 +33,10 @@ a:hover::before {
     left: 50%;
     top: 100%;
     transform: translate(-50%, 5px);
+}
+
+.menu-icon {
+    display: none;
 }
 
 h1, h2, h3, h4, h5 {
@@ -139,6 +143,7 @@ header {
 
 .top {
     gap: 30px;
+    margin-bottom: 6px;
 }
 
 .info-txt, .body-txt, .view-all, .post-content-heading, .description-txt, .description-vacancy, .contacts {
@@ -194,11 +199,15 @@ header {
     padding-bottom: 90px;
 }
 
+.latest-posts {
+    margin-bottom: 29px;
+}
+
 .lp-heading {
     display: flex;
     align-content: center;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 41px;
 }
 
 .post-list {
@@ -206,7 +215,7 @@ header {
     justify-content: space-between;
     gap: 30px;
     img {
-        margin-bottom: 20px;
+        margin-bottom: 22px;
     }
     .post-content {
         display: flex;
@@ -307,4 +316,16 @@ footer {
     font-size: 0.75rem;
     line-height: 1.245rem;
     letter-spacing: 0.075rem;
+}
+
+@media screen and (max-width: 1439px) {
+    header .links {
+        gap: 40px;
+    }
+    nav {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
 }
