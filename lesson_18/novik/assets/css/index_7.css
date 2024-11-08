@@ -48,6 +48,10 @@ nav ul li a:hover {
     text-shadow: 0px 0px 2px;
 }
 
+.menu-icon {
+    display: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -328,6 +332,20 @@ footer {
     .skills_list_item {
         height: 200px;
     }
+}
+
+@media screen and (max-width: 620px) {
+    nav ul {
+        display: none;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu-icon {
+        display: block;
+    }    
 }
 
 @media screen and (max-width:480px) {

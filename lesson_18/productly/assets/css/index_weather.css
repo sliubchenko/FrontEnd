@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3399CC;
+    border: 25px solid #2B81AC;
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    letter-spacing: 0;
+    color: white;
+    padding: 5%;
+    margin: 0;
+    height: 100vh;
+}
+
+section {
+    width: min(90%, 1170px);
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 1.313rem;
+    margin-bottom: 35px;
+}
+
+h2 {
+    font-size: 1.375rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+hgroup p {
+    font-size: 1.375rem;
+    opacity: 0.7;
+}
+
+.cities-block {
+    border: 2px solid white;
+    background-color: white;
+    padding: 0;
+    margin-bottom: 35px;
+}
+
+.cities-block:hover .city {
+    opacity: 0.7;
+}
+
+.cities-row {
+    font-size: 0;
+}
+
+.city {
+    margin: 2px;
+    font-size: initial;
+    display: inline-block;
+    text-align: center;
+    transition: all .1s ease-in;
+    padding: 2rem;
+    opacity: 1;
+}
+
+.cities-block .city:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.width-one {
+    width: calc(25% - 4px);
+}
+
+.width-two {
+    width: calc(50% - 4px);
+}
+
+.width-four {
+    width: calc(100% - 4px);
+}
+
+.lisbon {
+    background-color: #3399CC;
+}
+
+.paris {
+    background-color: #33CCCC;
+}
+
+.belgrade {
+    background-color: #996699;
+}
+
+.venice {
+    background-color: #C24747;
+}
+
+.tel-avive {
+    background-color: #E2674A;
+}
+
+.cair {
+    background-color: #FFCC66;
+}
+
+.new-york {
+    background-color: #99CC99;
+}
+
+.new-delhi {
+    background-color: #669999;
+}
+
+.san-francisco {
+    background-color: #CC6699;
+}
+
+.tokyo {
+    background-color: #339966;
+}
+
+.sydney {
+    background-color: #666699;
+}
