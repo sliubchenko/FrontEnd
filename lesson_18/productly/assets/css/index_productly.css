@@ -462,6 +462,10 @@ footer a {
     .marketer-section img {
         width: 75%;
     }
+    footer {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
 @media screen and (max-width: 640px) {
