@@ -12,11 +12,21 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/index_productly.css">
+    <link rel="stylesheet" href="assets/css/index_productly_new.min.css">
 </head>
 
 <body>
-
+    <div class="page-shadow show" onclick="document.body.classList.toggle('open-mobile-panel')"></div>
+    <div class="mobile-panel open">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Resources</a></li>
+            </ul>
+        </nav>
+    </div>
     <header>
         <div class="container">
             <div class="logo">
@@ -24,7 +34,7 @@
                     <img src="assets/img/productly_logo.png" alt="productly_logo">
                 </a>
             </div>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="#">Product</a></li>
                     <li><a href="#">Customers</a></li>
@@ -33,7 +43,10 @@
                 </ul>
             </nav>
             <div class="nav-btns">
-                <img class="menu-icon" src="assets/img/menu-icon.png" alt="menu-icon">
+                <div class="hamburger">
+                    <button type="button" class="menu-button" 
+                    onclick="document.body.classList.toggle('open-mobile-panel')"><span></span></button>
+                </div>
                 <button type="button" class="btn btn-nav btn-white">Sign In</button>
                 <button type="button" class="btn btn-nav">Sign Up</button>
             </div>

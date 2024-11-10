@@ -297,7 +297,7 @@ footer {
   background-color: black;
 }
 .hamburger-btn span::before, .hamburger-btn span::after {
-  left: 0%;
+  left: 0;
   content: "";
 }
 .hamburger-btn span::before {
@@ -320,11 +320,11 @@ footer {
 
 .mobile-panel {
   position: fixed;
-  width: 300px;
+  width: 200px;
   height: 100vh;
   background-color: white;
   z-index: 11;
-  transform: translateX(-300px);
+  transform: translateX(-200px);
   transition: all 0.5s ease;
 }
 
