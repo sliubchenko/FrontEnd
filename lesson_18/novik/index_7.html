@@ -7,12 +7,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/index_7.css">
+    <link rel="stylesheet" href="assets/css/index_7_new.min.css">
 </head>
 <body>
+    <div class="page-shadow show" onclick="document.body.classList.toggle('open-mobile-menu')"></div>
+    <div class="mobile-panel open">
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about_me">About&nbsp;me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>
+    </div>
     <header>
         <div class="container">
-            <nav>
+            <nav class="main-menu">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#about_me">About&nbsp;me</a></li>
@@ -20,7 +32,10 @@
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contacts">Contacts</a></li>
                 </ul>
-                <img class="menu-icon" src="assets/image/menu-icon.png" alt="menu-icon">
+                <div class="menu-hamburger">
+                    <button type="button" class="hamburger-btn" 
+                    onclick="document.body.classList.toggle('open-mobile-menu')"><span></span></button>
+                </div>
             </nav>
         </div>
     </header>
@@ -185,7 +200,7 @@
             </div>
         </section>
     </main>
-    <footer>
+    <footer id="contacts">
         <div class="container">
             <hgroup>
                 <h2>Contacts</h2>

@@ -14,7 +14,7 @@ body {
     font-family: "Gilroy", "Open Sans", sans-serif;
 }
 
-nav {
+.main-menu {
     display: block;
     min-height: 80px;
     padding: 25px 0;
@@ -25,12 +25,12 @@ ul {
     list-style: none;
 }
 
-nav ul {
+.main-menu ul {
     text-align: center;
     font-size: 0;
 }
 
-nav ul li {
+.main-menu ul li {
     display: inline;
     margin: 0 20px;
     font-size: 1.125rem;
@@ -39,21 +39,13 @@ nav ul li {
     line-height: 30px;
 }
 
-nav ul li a {
+.main-menu ul li a {
     color: var(--gray-text-color);
 }
 
-nav ul li a:hover {
+.main-menu ul li a:hover {
     color: var(--black-text-color);
     text-shadow: 0px 0px 2px;
-}
-
-.menu-button {
-    width: 25px;
-    height: 25px;
-    background-color: transparent;
-    display: none;
-    cursor: pointer;
 }
 
 a {
@@ -282,28 +274,89 @@ footer {
     text-align: center;
 }
 
-.menu-button {
+.menu-hamburger {
+    display: none;
+}
+
+.hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
     position: relative;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    span, span::before, span::after {
+        position: absolute;
+        width: 20px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: black;
+    }
+    span::before, span::after {
+        left: 0%;
+        content: '';
+    }
+    span::before {
+        top: -7px;
+    }
+    span::after {
+        top: 7px;
+    }
 }
 
-.menu-button span, .menu-button span::before, .menu-button span::after {
-    position: absolute;
-    width: 20px;
-    height: 4px;
-    background-color: black;
-    border-radius: 2px;
+.page-shadow {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s ease;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .5);
+    z-index: 10;
 }
 
-.menu-button span::before, .menu-button span::after {
-    content: '';
+.mobile-panel {
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background-color: white;
+    z-index: 11;
+    transform: translateX(-300px);
+    transition: all .5s ease;
 }
 
-.menu-button span::before {
-    top: 6px;
+.open-mobile-menu {
+    .page-shadow {
+        opacity: 1;
+        visibility: visible;
+    }
+    .mobile-panel {
+        transform: translateX(0);
+    }
 }
 
-.menu-button span::after {
-    top: -6px;
+.mobile-menu {
+    ul {
+        border-top: 1px solid gray;
+        li {
+            border-bottom: 1px solid gray;
+            a {
+                display: inline-block;
+                width: 100%;
+                padding: 10px 20px;
+                line-height: 40px;
+                color: var(--gray-text-color);
+                &:hover {
+                    color: var(--black-text-color);
+                    text-shadow: 0px 0px 2px;
+                    background-color: #f6f6f6;
+                }
+            }
+        }
+    }
 }
 
 @font-face {
@@ -363,15 +416,15 @@ footer {
 }
 
 @media screen and (max-width: 620px) {
-    nav ul {
+    .main-menu ul {
         display: none;
     }
-    nav {
+    .main-menu {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    .menu-button {
+    .menu-hamburger {
         display: block;
     }    
 }
