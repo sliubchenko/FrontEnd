@@ -1,5 +1,10 @@
 @use "fonts";
 
+$text-color: #565656;
+$bg-color: #F4F4F4;
+$text-gray: #7B7B7B;
+$text-black: black;
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -21,12 +26,44 @@ header {
     }
 }
 
-h1 {
+h1, h2, h3 {
     font-family: "Red Hat Display", sans-serif;
     font-weight: 600;
     font-size: 3rem;
     line-height: 4rem;
     letter-spacing: 0.15rem;
+    margin-bottom: 70px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    line-height: 2.905rem;
+    letter-spacing: 0.175rem;
+    margin-bottom: 50px;
+}
+
+h3 {
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+p, .contacts {
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    font-size: 1.188rem;
+    line-height: 2rem;
+    letter-spacing: 0.059rem;
+    color: $text-color;
+}
+
+.contacts {
+    font-size: 1rem;
+    line-height: 1.66rem;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
 }
 
 .container {
@@ -34,3 +71,89 @@ h1 {
     margin: 0 auto;
 }
 
+.first-screen, .description-section, .first-section, .second-section, .third-section {
+    padding-bottom: 90px;
+    & > p:first-of-type {
+        margin-bottom: 2rem;
+    }
+}
+
+.description-section {
+    max-width: 570px;
+}
+
+:is(.first-section, .second-section, .third-section) img {
+    padding-bottom: 20px;
+}
+
+footer {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    background-color: $bg-color;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+.footer-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta, .contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts {
+    gap: 15px;
+    color: $text-black;
+}
+
+.soc, .soc-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 23px;
+}
+
+.soc-item {
+    cursor: pointer;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $text-color;
+    color: $text-color;
+    svg {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+    }
+    &:hover {
+        background-color: $text-color;
+        color: white;
+    }
+}
+
+.small-text {
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    font-size: 0.75rem;
+    line-height: 1.245rem;
+    letter-spacing: 0.075rem;
+}
+
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 2.063rem;
+        line-height: 3.125rem;
+        letter-spacing: 0.103rem;
+    }
+    
+}

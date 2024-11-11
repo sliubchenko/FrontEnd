@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Адаптивна графіка</title>
     <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -16,9 +18,86 @@
         <div class="container">
             <div class="first-screen">
                 <h1>AI Fashion Platform</h1>
-                
+                <img
+                    srcset="assets/images/first-screen-original-min.jpg 480w, elva-fairy-800w.jpg 800w"
+                    sizes="(max-width: 600px) 480px,
+                            800px"
+                    src="assets/images/first-screen-original-min.jpg"
+                    alt="Elva dressed as a fairy" />
+                <img src="assets/images/first-screen-original-min.jpg" alt="first-screen-original-min" loading="lazy">
+            </div>
+            <div class="description-section">
+                <h2>Project Overview</h2>
+                <p>FashHanger is a bespoke sustainable high-fashion accessory company based out of Berlin, currently
+                    operated by Siesly and her sister Ashely. They needed help for a big rebrand and wanted to relaunch
+                    their website.</p>
+                <p>Their goals were simple, create a unique e-commerce store that bring a wonderful shopping experience
+                    at every stage of the buyer’s journey.</p>
+            </div>
+            <div class="first-section">
+                <h2>User Research and Personas</h2>
+                <img src="assets/images/first-section-min.jpg" alt="first-section-min" loading="lazy">
+                <p>Who is your user? Indicate her KEY personality traits and help round out her overall image.</p>
+                <p>Originally, the personality section of this persona was based off the Myers Briggs personality test.
+                    According to the Myers Briggs, there are 16 potential user personality types. Our template
+                    integrates questions from this online personality test example into a series of sliding bar
+                    graphics. If you’re confused as to what the sliders mean, check out the Myers Briggs basics article.
+                </p>
+            </div>
+            <div class="second-section">
+                <h2>Initial Sketches</h2>
+                <img src="assets/images/secon-section-min.jpg" alt="secon-section-min" loading="lazy">
+                <p>In the beginning, It’s just about brainstorming.</p>
+                <p>I list out a jumble of words and draw tiny sketches related to what I’m working on (and find the
+                    parallels later). Personally, I prefer paper with a grid so I can convey things responsively. Most
+                    of the time perfection isn’t an issue and the sketches are just for me.
+                </p>
+            </div>
+            <div class="third-section">
+                <h2>Final Design</h2>
+                <img src="assets/images/third-section-min.jpg" alt="third-section-min" loading="lazy">
+                <p>I played with adding a wireframe of the website flow that would lead you in to each screen. For each
+                    of those screens I added a floating footer that allows users to see where they are in that
+                    particular flow and jump around as needed.” We’re digging this InVision-made wireframe.</p>
             </div>
         </div>
     </main>
+    <footer>
+        <div class="container">
+            <div class="footer-wrap">
+                <div class="cta">
+                    <h3>Need a project?</h3>
+                    <div class="contacts">
+                        <div>(239) 555-0108</div>
+                        <div>tanya.hill@example.com</div>
+                    </div>
+                </div>
+                <div class="soc">
+                    <button type="button" class="soc-item">
+                        <svg>
+                            <use xlink:href="assets/images/sprite.svg#ig"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="soc-item">
+                        <svg>
+                            <use xlink:href="assets/images/sprite.svg#fb"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="soc-item">
+                        <svg>
+                            <use xlink:href="assets/images/sprite.svg#x"></use>
+                        </svg>
+                    </button>
+                    <button type="button" class="soc-item">
+                        <svg>
+                            <use xlink:href="assets/images/sprite.svg#li"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <p class="small-text">© Copyright Manifest Theme. Allrights reserved</p>
+        </div>
+    </footer>
 </body>
+
 </html>
