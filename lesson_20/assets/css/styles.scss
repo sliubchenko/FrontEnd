@@ -78,6 +78,10 @@ img {
     }
 }
 
+.third-section > p:first-of-type {
+    margin-bottom: 0;
+}
+
 .description-section {
     max-width: 570px;
 }
@@ -203,13 +207,6 @@ footer {
     p {
         font-size: 1rem;
         letter-spacing: 0.05rem;
-    }
-    .first-screen {
-        padding-bottom: 70px;
-    }
-    
-    .third-section > p:first-of-type {
-        margin-bottom: 0;
     }
     h3 {
         font-size: 2rem;
