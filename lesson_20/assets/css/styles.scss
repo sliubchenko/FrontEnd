@@ -206,9 +206,10 @@ footer {
     }
     .first-screen, .description-section, .first-section, .second-section, .third-section {
         padding-bottom: 70px;
-        & > p:first-of-type {
-            margin-bottom: 0;
-        }
+    }
+    
+    .third-section > p:first-of-type {
+        margin-bottom: 0;
     }
     h3 {
         font-size: 2rem;
