@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
     <link rel="stylesheet" href="assets/css/index_7_new.min.css">
 </head>
 <body>
@@ -42,13 +43,13 @@
     <main>
         <div id="home">
             <div class="container">
-                <h1>Denis Novik</h1>
-                <img class="big-img" src="assets/image/denis_novik.jpg" alt="denis_novik">
+                <h1 class="animate__animated animate__backInRight">Denis Novik</h1>
+                <img loading="lazy" class="big-img" src="assets/image/denis_novik-min.jpg" alt="denis_novik">
             </div>
         </div>
         <section id="about_me">
             <div class="container">
-                <h2>About me</h2>
+                <h2 class="rotate">About me</h2>
                 <div class="about_me_text">
                     <p>
                         Hi, I'm Denis – UX/UI designer from Minsk.
@@ -176,7 +177,7 @@
                 <ul>
                     <li>
                         <figure>
-                            <img class="big-img" src="assets/image/Fashion-Store.jpg" alt="Fashion-Store">
+                            <img loading="lazy" class="big-img wow animate__backInLeft" src="assets/image/Fashion-Store-min.jpg" alt="Fashion-Store">
                             <figcaption><a href="#">Online fashion store -<br>Homepage</a></figcaption>
                         </figure>
                     </li>
@@ -184,7 +185,7 @@
                 <ul>
                     <li>
                         <figure>
-                            <img class="big-img" src="assets/image/reebok_web.jpg" alt="reebok_web">
+                            <img loading="lazy" class="big-img wow animate__backInRight" src="assets/image/reebok_web-min.jpg" alt="reebok_web">
                             <figcaption><a href="#">Reebok Store - Concept</a></figcaption>
                         </figure>
                     </li>
@@ -192,7 +193,7 @@
                 <ul>
                     <li>
                         <figure style="margin-bottom: 0;">
-                            <img class="big-img" src="assets/image/braun-landing.jpg" alt="braun-landing">
+                            <img loading="lazy" class="big-img wow animate__bounceInDown" src="assets/image/braun-landing-min.jpg" alt="braun-landing">
                             <figcaption><a href="#">Braun Landing Page - Concept</a></figcaption>
                         </figure>
                     </li>
@@ -220,5 +221,12 @@
             </div>
         </div>
     </footer>
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+        const wow = new WOW({
+            animateClass: 'animate__animated'
+        });
+        wow.init();
+    </script>
 </body>
 </html>
