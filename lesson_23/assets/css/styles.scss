@@ -1,0 +1,135 @@
+@use 'fonts';
+
+$main-menu-color: #4B5D68;
+$violet-middle: #8A40EE;
+$violet-dark: #212353;
+$button-light-violet: #9C69E2;
+$button-middle-violet: #8A40EE;
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 20px;
+    margin-bottom: 100px;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: all .5s ease;
+}
+
+img {
+    vertical-align: top;
+}
+
+.container {
+    width: min(1170px, 90%);
+    margin: 0 auto;
+}
+
+.logo-nav, .main-menu {
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    svg {
+        width: 45px;
+        height: 35px;
+    }
+}
+
+.main-menu, .request-demo {
+    gap: 40px;
+    font-size: 1rem;
+    line-height: 160%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    a {
+        color: $main-menu-color;
+        &:hover {
+            color: $violet-middle;
+        }
+    }
+}
+
+.request-demo {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: $violet-dark;
+    background-color: white;
+    letter-spacing: 0.005em;
+    padding: 16px 23px;
+    border-radius: 50px;
+    border: 1px solid $button-light-violet;
+    cursor: pointer;
+    transition: all .5s ease;
+    &:hover {
+        color: white;
+        background-color: $button-light-violet;
+        svg {
+            color: white;
+        }
+    }
+    svg {
+        width: 20px;
+        height: 14px;
+        color: $button-light-violet;
+        transition: all .5s ease;
+    }
+}
+
+.first-screen {
+    margin-bottom: 100px;
+    .container {
+        overflow: hidden;
+        background-image: url('../images/first-screen-img.png');
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        background-size: 65% auto;
+        h1 {
+            max-width: 600px;
+            margin-bottom: 50px;
+            font-family: "Work Sans", sans-serif;
+            font-weight: bold;
+            font-size: 5rem;
+            line-height: 110%;
+            color: $violet-dark;
+        }
+        p {
+            max-width: min(370px, 36%);
+            margin-bottom: 50px;
+            font-size: 1.125rem;
+            line-height: 160%;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            color: $main-menu-color;
+        }
+        button {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.light-violet {
+    @extend .request-demo;
+    background-color: $button-light-violet;
+    color: white;
+    padding: 16px 52px;
+    letter-spacing: 0;
+    &:hover {
+        background-color: $button-middle-violet;
+    }
+}
