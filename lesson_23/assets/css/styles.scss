@@ -1,10 +1,24 @@
 @use 'fonts';
 
+@mixin flex-container-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-container-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 $main-menu-color: #4B5D68;
 $violet-middle: #8A40EE;
 $violet-dark: #212353;
 $button-light-violet: #9C69E2;
 $button-middle-violet: #8A40EE;
+$button-pink: #F063B8;
+$button-middle-pink: #EB4BAB;
 $bg-medium-pink: #FDE8F5;
 $bg-light-green: #F0FAF9;
 $bg-light-violet: #F6F0FD;
@@ -22,9 +36,7 @@ header {
     padding: 20px;
     margin-bottom: 100px;
     .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex-container-row;
     }
 }
 
@@ -35,6 +47,10 @@ ul {
 a {
     text-decoration: none;
     transition: all .5s ease;
+    color: $main-menu-color;
+        &:hover {
+            color: $violet-middle;
+        }
 }
 
 img {
@@ -57,6 +73,18 @@ h2, h3 {
 h3 {
     font-weight: normal;
     font-size: 1.5rem;
+}
+
+h4, h5 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 160%;
+    color: $violet-dark;
+}
+
+h5 {
+    font-size: 1rem;
 }
 
 p {
@@ -82,18 +110,12 @@ p {
     }
 }
 
-.main-menu, .request-demo{
+.main-menu, .request-demo, .about, .help {
     gap: 40px;
     font-size: 1rem;
     line-height: 160%;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    a {
-        color: $main-menu-color;
-        &:hover {
-            color: $violet-middle;
-        }
-    }
 }
 
 .request-demo {
@@ -150,10 +172,18 @@ p {
     @extend .request-demo;
     background-color: $button-light-violet;
     color: white;
-    padding: 16px 52px;
+    padding: 16px 58px;
     letter-spacing: 0;
     &:hover {
         background-color: $button-middle-violet;
+    }
+}
+
+.pink {
+    @extend .light-violet;
+    background-color: $button-pink;
+    &:hover {
+        background-color: $button-middle-pink;
     }
 }
 
@@ -196,9 +226,7 @@ p {
                     z-index: 1;
                 }
                 .card-content {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
+                    @include flex-container-column;
                     gap: 20px;
                     width: 400px;
                     height: 400px;
@@ -224,7 +252,6 @@ p {
                         &:hover {
                             text-shadow: 1px 1px 2px $violet-dark;
                             svg {
-                                // transform: translateX(20px);
                                 animation: 1s ease infinite slide;
                                 @keyframes slide {
                                     0% {
@@ -267,6 +294,7 @@ p {
 }
 
 .testimonials {
+    margin-bottom: 120px;
     .container {
         background-color: $bg-medium-blue;
         background-image: url('../images/reviews-bg-image.svg');
@@ -303,9 +331,7 @@ p {
                     }
                 }
                 blockquote {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
+                    @include flex-container-column;
                     .author {
                         display: flex;
                         flex-direction: column;
@@ -330,4 +356,127 @@ cite + a {
     font-size: 0.875rem;
     letter-spacing: 0.001em;
     color: $button-light-violet;
+}
+
+.try-for-free {
+    margin-bottom: 100px;
+    .container {
+        @include flex-container-row;
+        h2 {
+            margin-bottom: 20px;
+        }
+        .btns {
+            @include flex-container-row;
+            gap: 30px;
+        }
+    }
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    .contacts {
+        @include flex-container-column;
+        gap: 60px;
+        .company {
+            @include flex-container-row;
+            gap: 20px;
+            svg {
+                width: 49px;
+                height: 35px;
+            }
+        }
+        .info {
+            @include flex-container-column;
+            gap: 10px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: normal;
+            font-size: 1rem;
+            line-height: 180%;
+            letter-spacing: 0.01em;
+            color: $violet-dark;
+            .address {
+                font-weight: 500;
+            }
+        }
+    }
+    .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 169px;
+        .about, .help, .soc-media {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
+}
+
+.list {
+    @include flex-container-column;
+    gap: 10px;
+}
+
+.list-h {
+    @include flex-container-row;
+    gap: 15px;
+}
+
+.soc-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    color: white;
+    opacity: 1;
+    transition: all 1s ease;
+    svg {
+        fill: currentColor;
+        width: 40%;
+        height: 40%;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $violet-dark;
+        opacity: .1;
+        z-index: -1;
+        transition: all 1s ease;
+    }
+    &:hover {
+        opacity: 1;
+        border: 1px solid #3B5998;
+        color: #3B5998;
+    }
+    &:hover::after {
+        opacity: 0;
+    }
+}
+
+.fb {
+    &:hover {
+        border: 1px solid #3B5998;
+        color: #3B5998;
+    }
+}
+.tw {
+    &:hover {
+        border: 1px solid #00ACEE;
+        color: #00ACEE;
+    }
+}
+.ig {
+    &:hover {
+        border: 1px solid #C13584;
+        color: #C13584;
+    }
 }
