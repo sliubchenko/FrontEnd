@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Проєкт 1. Перший вебсайт з HTML та CSS</title>
+    <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+    <link rel="manifest" href="assets/favicon/site.webmanifest" />
     <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 
@@ -54,7 +60,7 @@
         </div>
     </header>
     <main>
-        <div class="first-screen">
+        <section class="first-screen">
             <div class="container">
                 <h1>Save your data storage here.</h1>
                 <p>Data Warehouse is a data storage area that has been
@@ -64,11 +70,11 @@
                     <span>Learn more</span>
                 </button>
             </div>
-        </div>
+        </section>
         <div class="who-we-are">
             <div class="container">
                 <div class="we-are-img">
-                    <img src="assets/images/who-we-are-image.png" alt="who-we-are-image">
+                    <img loading="lazy" src="assets/images/who-we-are-image.png" alt="who-we-are-image">
                 </div>
                 <section class="we-are">
                     <h2>We are a high-level data storage bank</h2>
@@ -79,7 +85,7 @@
                 </section>
             </div>
         </div>
-        <div class="features">
+        <section class="features">
             <div class="container">
                 <hgroup>
                     <h2>Features</h2>
@@ -87,11 +93,11 @@
                         Warehouse.</p>
                 </hgroup>
                 <div class="cards">
-                    <div class="card">
+                    <section class="card">
                         <div class="search-data-img z-i-1">
-                            <img class="card-img" src="assets/images/search-data-image.png" alt="search-data-image">
+                            <img loading="lazy" class="card-img" src="assets/images/search-data-image.png" alt="search-data-image">
                         </div>
-                        <section class="card-content search-data-bg-image">
+                        <div class="card-content search-data-bg-image">
                             <h3>Search Data</h3>
                             <p>Don’t worry if your data is very large, the Data Warehoue provides a search engine, which
                                 is useful for making it easier to find data effectively saving time.</p>
@@ -101,13 +107,13 @@
                                     <use xlink:href="assets/images/sprite.svg#arrow"></use>
                                 </svg>
                             </a>
-                        </section>
-                    </div>
-                    <div class="card">
-                        <div class="hours-access-img z-i-1">
-                            <img class="card-img" src="assets/images/hours-access-image.png" alt="hours-access-image">
                         </div>
-                        <section class="card-content hours-access-bg-image">
+                    </section>
+                    <section class="card">
+                        <div class="hours-access-img z-i-1">
+                            <img loading="lazy" class="card-img" src="assets/images/hours-access-image.png" alt="hours-access-image">
+                        </div>
+                        <div class="card-content hours-access-bg-image">
                             <h3>24 Hours Access</h3>
                             <p>Access is given 24 hours a full morning to night and meet again in the morning, giving
                                 you comfort when you need data when urgent.</p>
@@ -117,13 +123,13 @@
                                     <use xlink:href="assets/images/sprite.svg#arrow"></use>
                                 </svg>
                             </a>
-                        </section>
-                    </div>
-                    <div class="card">
-                        <div class="print-out-img z-i-1">
-                            <img class="card-img" src="assets/images/print-out-image.png" alt="print-out-image">
                         </div>
-                        <section class="card-content print-out-bg-image">
+                    </section>
+                    <section class="card">
+                        <div class="print-out-img z-i-1">
+                            <img loading="lazy" class="card-img" src="assets/images/print-out-image.png" alt="print-out-image">
+                        </div>
+                        <div class="card-content print-out-bg-image">
                             <h3>Print Out</h3>
                             <p>Print out service gives you convenience if someday you need print data, just edit it all
                                 and just print it.</p>
@@ -133,13 +139,13 @@
                                     <use xlink:href="assets/images/sprite.svg#arrow"></use>
                                 </svg>
                             </a>
-                        </section>
-                    </div>
-                    <div class="card">
-                        <div class="security-code-img z-i-1">
-                            <img class="card-img" src="assets/images/security-code-image.png" alt="security-code-image">
                         </div>
-                        <section class="card-content security-code-bg-image">
+                    </section>
+                    <section class="card">
+                        <div class="security-code-img z-i-1">
+                            <img loading="lazy" class="card-img" src="assets/images/security-code-image.png" alt="security-code-image">
+                        </div>
+                        <div class="card-content security-code-bg-image">
                             <h3>Security Code</h3>
                             <p>Data Security is one of our best facilities. Allows for your files to be safer. The file
                                 can be secured with a code or password that you created, so only you can open the file.
@@ -150,19 +156,19 @@
                                     <use xlink:href="assets/images/sprite.svg#arrow"></use>
                                 </svg>
                             </a>
-                        </section>
-                    </div>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </div>
-        <div class="testimonials">
+        </section>
+        <section class="testimonials">
             <div class="container">
                 <h2>Testimonials</h2>
                 <!-- aline center doesn't correct in draft -->
                 <div class="review-cards">
-                    <article class="card">
+                    <div class="card">
                         <div class="avatar">
-                            <img src="assets/images/avatar-1.jpg" alt="avatar-1">
+                            <img loading="lazy" src="assets/images/avatar-1.jpg" alt="avatar-1">
                         </div>
                         <blockquote>
                             <div class="author">
@@ -173,10 +179,10 @@
                             <p>Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam
                                 laoreet nulla.</p>
                         </blockquote>
-                    </article>
-                    <article class="card">
+                    </div>
+                    <div class="card">
                         <div class="avatar">
-                            <img src="assets/images/avatar-2.jpg" alt="avatar-2">
+                            <img loading="lazy" src="assets/images/avatar-2.jpg" alt="avatar-2">
                         </div>
                         <blockquote>
                             <div class="author">
@@ -187,11 +193,11 @@
                             <p>Nisl, sagittis viverra enim erat tortor ultricies massa turpis. Arcu pulvinar aenean nam
                                 laoreet nulla.</p>
                         </blockquote>
-                    </article>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="try-for-free">
+        </section>
+        <section class="try-for-free">
             <div class="container">
                 <hgroup>
                     <h2>Try for free!</h2>
@@ -209,12 +215,12 @@
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
     <footer>
         <div class="container">
             <div class="navigation">
-                <div class="contacts">
+                <section class="contacts">
                     <div class="company">
                         <svg>
                             <use xlink:href="assets/images/sprite.svg#logo"></use>
@@ -232,7 +238,7 @@
                             <a href="tel:12323434">1-232-3434 (Main)</a>
                         </div>
                     </address>
-                </div>
+                </section>
                 <nav class="footer-nav">
                     <div class="about">
                         <h5>About</h5>

@@ -38,8 +38,8 @@ header {
     z-index: 12;
     background-color: rgba($color: white, $alpha: .9);
     backdrop-filter: blur(2px);
-    padding: 20px;
-    margin-bottom: 102px; // +2 pp
+    padding: 21px;
+    margin-bottom: 100px;
     .container {
         @include flex-container-row;
     }
@@ -774,6 +774,10 @@ cite + a {
             gap: 30px;
         }
     }
+    .copyright {
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (max-width:520px) {
@@ -817,7 +821,7 @@ cite + a {
         }
     }
     .try-for-free, .navigation {
-        margin-bottom: 50px;
+        margin-bottom: 75px;
     }
     .btns {
         @include flex-container-column;
@@ -825,6 +829,12 @@ cite + a {
     .footer-nav {
         @include flex-container-column;
         align-items: center;
+        .about, .help, .soc-media {
+            align-items: center;
+            .list {
+                align-items: center;
+            }
+        }
     }
 }
 
@@ -835,8 +845,15 @@ cite + a {
     h2 {
         font-size: 2rem;
     }
-    .features .container .cards .card .card-content {
+    .features .container .cards .card {
+        flex-direction: column;
+        .card-content {
+            width: min(400px, 90%);
+            height: auto;
             padding: 20px 10px 10px 90px;
+            margin-left: 0;
+            margin-top: -20px;
+        }
     }
     .review-cards .card {
         flex-direction: column;
