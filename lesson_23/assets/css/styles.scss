@@ -157,7 +157,7 @@ p {
     margin-bottom: 100px;
     .container {
         overflow: hidden;
-        background-image: url('../images/first-screen-img.png');
+        background-image: url('../images/first-screen-img-min.png');
         background-repeat: no-repeat;
         background-position: right bottom;
         background-size: 66% auto;
@@ -587,6 +587,7 @@ cite + a {
 }
 
 .mobile-panel {
+    visibility: hidden;
     position: fixed;
     width: 250px;
     height: 100vh;
@@ -607,6 +608,7 @@ cite + a {
     }
     .mobile-panel {
         transform: translateX(0);
+        visibility: visible;
     }
 }
 
