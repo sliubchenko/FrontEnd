@@ -9,20 +9,41 @@
 </head>
 
 <body>
+    <div class="page-shadow" onclick="document.body.classList.toggle('open-mobile-menu')"></div>
+    <div class="mobile-panel open">
+        <nav class="mobile-menu">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+        <button type="button" class="request-demo">
+            Request Demo
+            <svg>
+                <use xlink:href="assets/images/sprite.svg#arrow"></use>
+            </svg>
+        </button>
+    </div>
     <header>
         <div class="container">
             <div class="logo-nav">
                 <svg>
                     <use xlink:href="assets/images/sprite.svg#logo"></use>
                 </svg>
-                <nav>
-                    <ul class="main-menu">
+                <nav class="main-menu">
+                    <ul>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Help</a></li>
                         <li><a href="#">Features</a></li>
                         <li><a href="#">Sign Up</a></li>
                     </ul>
                 </nav>
+                <div class="menu-hamburger">
+                    <button type="button" class="hamburger-btn" 
+                    onclick="document.body.classList.toggle('open-mobile-menu')"><span></span></button>
+                </div>
             </div>
             <button type="button" class="request-demo">
                 Request Demo
@@ -46,7 +67,9 @@
         </div>
         <div class="who-we-are">
             <div class="container">
-                <img src="assets/images/who-we-are-image.png" alt="who-we-are-image">
+                <div class="we-are-img">
+                    <img src="assets/images/who-we-are-image.png" alt="who-we-are-image">
+                </div>
                 <section class="we-are">
                     <h2>We are a high-level data storage bank</h2>
                     <p>The place to store various data that you can access at any time through the internet and where
@@ -65,7 +88,9 @@
                 </hgroup>
                 <div class="cards">
                     <div class="card">
-                        <img class="card-img" src="assets/images/search-data-image.png" alt="search-data-image">
+                        <div class="search-data-img z-i-1">
+                            <img class="card-img" src="assets/images/search-data-image.png" alt="search-data-image">
+                        </div>
                         <section class="card-content search-data-bg-image">
                             <h3>Search Data</h3>
                             <p>Don’t worry if your data is very large, the Data Warehoue provides a search engine, which
@@ -79,7 +104,9 @@
                         </section>
                     </div>
                     <div class="card">
-                        <img class="card-img" src="assets/images/hours-access-image.png" alt="hours-access-image">
+                        <div class="hours-access-img z-i-1">
+                            <img class="card-img" src="assets/images/hours-access-image.png" alt="hours-access-image">
+                        </div>
                         <section class="card-content hours-access-bg-image">
                             <h3>24 Hours Access</h3>
                             <p>Access is given 24 hours a full morning to night and meet again in the morning, giving
@@ -93,7 +120,9 @@
                         </section>
                     </div>
                     <div class="card">
-                        <img class="card-img" src="assets/images/print-out-image.png" alt="print-out-image">
+                        <div class="print-out-img z-i-1">
+                            <img class="card-img" src="assets/images/print-out-image.png" alt="print-out-image">
+                        </div>
                         <section class="card-content print-out-bg-image">
                             <h3>Print Out</h3>
                             <p>Print out service gives you convenience if someday you need print data, just edit it all
@@ -107,7 +136,9 @@
                         </section>
                     </div>
                     <div class="card">
-                        <img class="card-img" src="assets/images/security-code-image.png" alt="security-code-image">
+                        <div class="security-code-img z-i-1">
+                            <img class="card-img" src="assets/images/security-code-image.png" alt="security-code-image">
+                        </div>
                         <section class="card-content security-code-bg-image">
                             <h3>Security Code</h3>
                             <p>Data Security is one of our best facilities. Allows for your files to be safer. The file
