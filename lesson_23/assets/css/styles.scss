@@ -33,11 +33,13 @@ $bg-medium-blue: #CCDDFF;
 }
 
 header {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 12;
     background-color: rgba($color: white, $alpha: .9);
-    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+            backdrop-filter: blur(2px);
     padding: 21px;
     margin-bottom: 100px;
     .container {
@@ -234,7 +236,8 @@ p {
         .cards {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            column-gap: 30px;
+            -moz-column-gap: 30px;
+                 column-gap: 30px;
             row-gap: 50px;
             .card {
                 display: flex;
@@ -282,7 +285,19 @@ p {
                         &:hover, &:focus {
                             text-shadow: 1px 1px 2px $violet-dark;
                             svg {
-                                animation: 1s ease infinite slide;
+                                -webkit-animation: 1s ease infinite slide;
+                                        animation: 1s ease infinite slide;
+                                @-webkit-keyframes slide {
+                                    0% {
+                                        transform: translateX(0);
+                                    }
+                                    50% {
+                                        transform: translateX(200%);
+                                    }
+                                    100% {
+                                        transform: translateX(0);
+                                    }
+                                }
                                 @keyframes slide {
                                     0% {
                                         transform: translateX(0);
@@ -360,7 +375,8 @@ p {
                     img {
                         width: 100%;
                         height: 100%;
-                        object-fit: cover;
+                        -o-object-fit: cover;
+                           object-fit: cover;
                     }
                 }
                 blockquote {
