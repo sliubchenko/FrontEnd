@@ -1,0 +1,27 @@
+table {
+    width: 400px;
+    height: 600px;
+    margin: 100px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    height: 3.5rem;
+    text-align: center;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.clicked {
+    background-color: black;
+    color: white;
+}
+
+#display {
+    text-align: right;
+    padding: 0 1rem;
+}
