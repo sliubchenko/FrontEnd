@@ -2,7 +2,7 @@ const carousel = document.querySelector('.carousel');
 const frame = document.querySelectorAll('.frame');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
-const count = document.querySelector('.count');
+const countElements = document.querySelectorAll('.count');
 const shadow = document.querySelector('.shadow');
 const zoomed = document.querySelector('.zoomed');
 const qty = carousel.children.length;
@@ -41,15 +41,26 @@ shadow.addEventListener('click', () => {
 shadow.addEventListener('wheel', (e) => {
     e.preventDefault();
     if (e.deltaY > 0) {
-        shift(1);
+        shift(1, 0);
     } else {
-        shift(-1);
-    }
+        shift(-1, 0);
+    };
     showZoomedImage(currentElem);
+});
+
+carousel.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    if (e.deltaY > 0) {
+        shift(1, 1);
+    } else {
+        shift(-1, 1);
+    };
 })
 
 function setCount(n) {
-    count.textContent = `${n + 1} / ${qty}`;
+    countElements.forEach(count => {
+        count.textContent = `${n + 1} / ${qty}`;
+    });
 };
 
 function startInterval() {
@@ -61,10 +72,10 @@ function stopInterval() {
     clearInterval(autoScroll);
 };
 
-function shift(step = 1) {
+function shift(step = 1, d) {
     currentElem = (currentElem + step + qty) % qty;
     carousel.children[currentElem].scrollIntoView(smooth);
-    setCount(currentElem);
+    setCount(currentElem, d);
 };
 
 function showZoomedImage(index) {

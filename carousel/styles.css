@@ -72,8 +72,8 @@ h1 {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .shadow .count {
-  font-size: 1.5rem;
   color: white;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 .shadow.zoom {
