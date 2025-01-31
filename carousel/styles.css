@@ -1,0 +1,89 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  gap: 10px;
+  width: 640px;
+  height: 480px;
+  margin-inline: auto;
+  overflow: auto;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.frame {
+  font-size: 15rem;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-content: center;
+  background-color: lightgray;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.count {
+  font-size: 1.2rem;
+}
+
+.shadow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.shadow .count {
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+.shadow.zoom {
+  opacity: 1;
+  visibility: visible;
+}
+
+.zoomed {
+  background-color: white;
+  width: 800px;
+  height: 600px;
+  margin-bottom: 20px;
+}
